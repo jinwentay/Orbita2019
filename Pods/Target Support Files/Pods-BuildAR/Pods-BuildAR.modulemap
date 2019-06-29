@@ -1,0 +1,6 @@
+framework module Pods_BuildAR {
+  umbrella header "Pods-BuildAR-umbrella.h"
+
+  export *
+  module * { export * }
+}
