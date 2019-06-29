@@ -72,6 +72,10 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         buildButton.layer.cornerRadius = buildButton.frame.height / 2
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        createAlert(title: "Welcome", message: "Select an object, then tap the screen to place it")
+    }
+    
     @objc func handleTap(sender: UITapGestureRecognizer){
         
         // Identify location of tap in real world
@@ -295,6 +299,15 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             node.removeFromParentNode()
         }
         self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+    }
+    
+    func createAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: {
+            (action) in
+            alert.dismiss(animated:true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
