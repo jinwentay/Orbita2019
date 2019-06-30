@@ -15,10 +15,10 @@ class NavButtonCustom: UIButton {
 //        self.layer.cornerRadius = self.frame.height / 2
 //        self.setTitleColor(UIColor.white, for: .normal)
         if (self.currentTitle == "Reset") {
-            self.layer.shadowColor = UIColor.red.cgColor
-            self.layer.shadowRadius = 5
+            self.layer.shadowColor = UIColor.black.cgColor
+            self.layer.shadowRadius = 2
             self.layer.cornerRadius = self.frame.height/2
-            self.layer.shadowOpacity = 0.7
+            self.layer.shadowOpacity = 0.5
             self.layer.shadowOffset = CGSize(width: 2, height: 2)
             
         } else {

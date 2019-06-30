@@ -67,7 +67,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     // MARK: Actions
     @IBAction func create(_ sender: UIButton) {
-//        print("create pressed")
+
+        //createAlert(title: "Choose your background", message: "Do you want to create your world in Augmented Reality?")
     }
     
     // MARK: Functions
@@ -82,6 +83,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 print("Upload complete! Here's some metadata! \(String(describing: metadata))")
             }
         }
+    }
+    
+    func createAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {

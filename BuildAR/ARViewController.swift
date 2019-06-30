@@ -143,6 +143,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         inBuidingMode = false
         
         // Comment out later (for simulation debugging)
+        /*
         question.isHidden = false
         answerView.isHidden = false
         
@@ -152,6 +153,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             self.numberOfQuestions = Int(snap.childrenCount)
             self.generateQuestion()
         }
+        */
     }
     
     // Goes into building mode
