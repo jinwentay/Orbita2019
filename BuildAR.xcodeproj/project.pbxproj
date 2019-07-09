@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6E21087122B70AE50016A60B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E21087022B70AE50016A60B /* GoogleService-Info.plist */; };
 		6E45CEBF22AF5AA300CECA09 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E45CEBE22AF5AA300CECA09 /* ARViewController.swift */; };
+		6ECAAF3B22D41C6900ABB566 /* questionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECAAF3A22D41C6900ABB566 /* questionViewController.swift */; };
 		6EE7CCA122B91F4400E137E9 /* NavButtonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7CCA022B91F4400E137E9 /* NavButtonCustom.swift */; };
 		C592B26222C50A9E0075FB2D /* animalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26122C50A9D0075FB2D /* animalViewController.swift */; };
 		C592B26422C50AE50075FB2D /* vehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26322C50AE50075FB2D /* vehiclesViewController.swift */; };
@@ -39,6 +40,7 @@
 		1C6E7CC7E9C6C9ACFEF5F620 /* Pods-BuildAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuildAR.release.xcconfig"; path = "Target Support Files/Pods-BuildAR/Pods-BuildAR.release.xcconfig"; sourceTree = "<group>"; };
 		6E21087022B70AE50016A60B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E45CEBE22AF5AA300CECA09 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		6ECAAF3A22D41C6900ABB566 /* questionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionViewController.swift; sourceTree = "<group>"; };
 		6EE7CCA022B91F4400E137E9 /* NavButtonCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavButtonCustom.swift; sourceTree = "<group>"; };
 		C592B26122C50A9D0075FB2D /* animalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animalViewController.swift; sourceTree = "<group>"; };
 		C592B26322C50AE50075FB2D /* vehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vehiclesViewController.swift; sourceTree = "<group>"; };
@@ -130,13 +132,14 @@
 				C5EB57A222A7B8A600D6A6DA /* art.scnassets */,
 				C5EB57A422A7B8A600D6A6DA /* ViewController.swift */,
 				6E45CEBE22AF5AA300CECA09 /* ARViewController.swift */,
-				C592B26522C75D910075FB2D /* questionCustomLabel.swift */,
-				6EE7CCA022B91F4400E137E9 /* NavButtonCustom.swift */,
+				6ECAAF3A22D41C6900ABB566 /* questionViewController.swift */,
 				C592B26122C50A9D0075FB2D /* animalViewController.swift */,
 				C592B26322C50AE50075FB2D /* vehiclesViewController.swift */,
-				C5EB582422A81C0C00D6A6DA /* createWorldCustom.swift */,
 				C5EB57A622A7B8A600D6A6DA /* Main.storyboard */,
 				C5EB57AB22A7B8A700D6A6DA /* LaunchScreen.storyboard */,
+				C592B26522C75D910075FB2D /* questionCustomLabel.swift */,
+				6EE7CCA022B91F4400E137E9 /* NavButtonCustom.swift */,
+				C5EB582422A81C0C00D6A6DA /* createWorldCustom.swift */,
 				C5EB57AE22A7B8A700D6A6DA /* Info.plist */,
 				6E21087022B70AE50016A60B /* GoogleService-Info.plist */,
 			);
@@ -322,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ECAAF3B22D41C6900ABB566 /* questionViewController.swift in Sources */,
 				C592B26422C50AE50075FB2D /* vehiclesViewController.swift in Sources */,
 				C5EB582522A81C0C00D6A6DA /* createWorldCustom.swift in Sources */,
 				C5EB57A522A7B8A600D6A6DA /* ViewController.swift in Sources */,

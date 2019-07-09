@@ -15,6 +15,10 @@ import Firebase
 var objectScene: String = ""
 var objectNode: String = ""
 
+var questionBranch = "animal"
+var questionID = 0
+var numberOfQuestions = 0
+
 var images = ["animal": "Dog",
               "vehicle": "ship",
               "taxi": "taxi"]
@@ -44,16 +48,10 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     let configuration = ARWorldTrackingConfiguration()
     let roofRef = Database.database().reference()
     
-    var questionBranch = "animal"
-    var questionID = 0
-    
-    
-    
     var objectSet = Set<String>()
     var inBuidingMode: Bool = true
     var text = ""
     var currentButton: UIButton? = nil
-    var numberOfQuestions = 0
     
     
     override func viewDidLoad() {
@@ -73,7 +71,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        createAlert(title: "Welcome", message: "Select an object, then tap the screen to place it")
+        //createAlert(title: "Welcome", message: "Select an object, then tap the screen to place it")
     }
     
     @objc func handleTap(sender: UITapGestureRecognizer){
@@ -95,7 +93,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         // When the hit test is not empty
         if !hitTest.isEmpty {
             let result = hitTest.first!
-            let name = result.node.name
+            let node = result.node
+            let name = node.name
             print("tapped \(String(describing: name))")
             
             // In Buiding mode
@@ -104,6 +103,10 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             }
             // In Quiz mode
             else if objectSet.contains(name ?? "null") {
+                
+                let action = SCNAction.rotateBy(x: 0, y: 1, z: 0, duration: 1)
+                let forever = SCNAction.repeatForever(action)
+                node.runAction(forever)
                 
                 question.isHidden = false
                 answerView.isHidden = false
@@ -114,7 +117,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
                 dataRef.observe(.value) { (snap: DataSnapshot) in
                     
                     // Get the number of questions in the catagory
-                    self.numberOfQuestions = Int(snap.childrenCount)
+                    numberOfQuestions = Int(snap.childrenCount)
                     self.generateQuestion()
                 }
                 self.generateImage(objectID: name ?? "AppIcon")
@@ -143,17 +146,17 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         inBuidingMode = false
         
         // Comment out later (for simulation debugging)
-        /*
+        
         question.isHidden = false
         answerView.isHidden = false
         
         let dataRef = roofRef.child("\(questionBranch)")
         dataRef.observe(.value) { (snap: DataSnapshot) in
             
-            self.numberOfQuestions = Int(snap.childrenCount)
+            numberOfQuestions = Int(snap.childrenCount)
             self.generateQuestion()
         }
-        */
+        
     }
     
     // Goes into building mode
@@ -302,7 +305,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         }
         self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
-    
+    /*
     func createAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: {
@@ -311,5 +314,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         }))
         self.present(alert, animated: true, completion: nil)
     }
+ */
 }
 
