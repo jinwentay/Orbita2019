@@ -25,40 +25,24 @@ class questionViewController: UIViewController {
     @IBOutlet var quizView: UIView!
     
     let roofRef = Database.database().reference()
-    
     var currentButton: UIButton? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        // Comment out later
-        
         let dataRef = roofRef.child("\(questionBranch)")
         dataRef.observe(.value) { (snap: DataSnapshot) in
-            
-            numberOfQuestions = Int(snap.childrenCount)
             self.generateQuestion()
         }
+        self.generateImage(objectID: objectName)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     
     // MARK: Actions
     
     @IBAction func choice(_ sender: UIButton) {
         
-        print("Button pressed is " + sender.currentTitle!)
+//        print("Button pressed is " + sender.currentTitle!)
         
         self.currentButton = sender
         
@@ -101,7 +85,7 @@ class questionViewController: UIViewController {
     }
     
     @IBAction func back(_ sender: UIButton) {
-        quizView.isHidden = true
+        mainViewController.hideQuizView()
         
         // Reset the question view
         next(nextButton)
@@ -117,9 +101,6 @@ class questionViewController: UIViewController {
     }
     
     private func generateQuestion() {
-        
-        // Get a new question
-        questionID = Int.random(in: 1...numberOfQuestions)
         
         // Set text for question label and for each choice label
         labelTextFromFirebase(key: "question", label: self.questionLabel)

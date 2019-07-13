@@ -12,12 +12,15 @@ import ARKit
 import FirebaseDatabase
 import Firebase
 
+var mainViewController = ARViewController()
+
 var objectScene: String = ""
 var objectNode: String = ""
+var objectName: String = ""
 
 var questionBranch = "animal"
 var questionID = 0
-var numberOfQuestions = 0
+//var numberOfQuestions = 0
 
 var images = ["animal": "Dog",
               "vehicle": "ship",
@@ -28,20 +31,10 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var itemView: UIView!
     @IBOutlet weak var animalView: UIView!
     @IBOutlet weak var vehicleView: UIView!
-    @IBOutlet weak var objectImage: UIImageView!
-    @IBOutlet weak var question: UILabel!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var buildButton: UIButton!
-    @IBOutlet weak var answerView: UIView!
-    @IBOutlet weak var choiceView: UIStackView!
-    @IBOutlet weak var nextView: UIStackView!
-    @IBOutlet weak var resultImage: UIImageView!
-    @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var labelA: UILabel!
-    @IBOutlet weak var labelB: UILabel!
-    @IBOutlet weak var labelC: UILabel!
-    @IBOutlet weak var labelD: UILabel!
+    @IBOutlet weak var quizContainerView: UIView!
     
     @IBOutlet var sceneView: ARSCNView!
     
@@ -57,9 +50,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints] //, ARSCNDebugOptions.showWorldOrigin]
+        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         self.sceneView.session.run(configuration)
         self.sceneView.autoenablesDefaultLighting = true
+        
+        mainViewController = self
         
         // Recognize taps
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
@@ -71,7 +66,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //createAlert(title: "Welcome", message: "Select an object, then tap the screen to place it")
+        //createAlert(title: "Welcome", message: "Select an object, then tap on one of the yellow dots on the screen to place it!")
     }
     
     @objc func handleTap(sender: UITapGestureRecognizer){
@@ -94,44 +89,43 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         if !hitTest.isEmpty {
             let result = hitTest.first!
             let node = result.node
-            let name = node.name
-            print("tapped \(String(describing: name))")
+            objectName = node.name ?? "AppIcon"
+            //print("tapped \(String(describing: objectName))")
             
             // In Buiding mode
             if inBuidingMode{
                 createObject(position: hitVector)
             }
             // In Quiz mode
-            else if objectSet.contains(name ?? "null") {
+            else if objectSet.contains(objectName ) {
                 
+                // Rotate selected object
                 let action = SCNAction.rotateBy(x: 0, y: 1, z: 0, duration: 1)
                 let forever = SCNAction.repeatForever(action)
                 node.runAction(forever)
                 
-                question.isHidden = false
-                answerView.isHidden = false
+                // Show quiz
+                quizContainerView.isHidden = false
                 
                 // Set the catagory of question
-                questionBranch = name!
+                questionBranch = objectName
                 let dataRef = roofRef.child("\(questionBranch)")
                 dataRef.observe(.value) { (snap: DataSnapshot) in
                     
                     // Get the number of questions in the catagory
-                    numberOfQuestions = Int(snap.childrenCount)
-                    self.generateQuestion()
+                    let numberOfQuestions = Int(snap.childrenCount)
+                    questionID = Int.random(in: 1...numberOfQuestions)
+
                 }
-                self.generateImage(objectID: name ?? "AppIcon")
             }
             // No object tapped
             else {
-                question.isHidden = true
-                answerView.isHidden = true
-                print("not object")
+                quizContainerView.isHidden = true
+                //print("not object")
             }
         } else {
-            question.isHidden = true
-            answerView.isHidden = true
-            print("hitTest is empty")
+            quizContainerView.isHidden = true
+            //print("hitTest is empty")
         }
     }
     
@@ -145,18 +139,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         itemView.isHidden = true
         inBuidingMode = false
         
-        // Comment out later (for simulation debugging)
-        
-        question.isHidden = false
-        answerView.isHidden = false
-        
-        let dataRef = roofRef.child("\(questionBranch)")
-        dataRef.observe(.value) { (snap: DataSnapshot) in
-            
-            numberOfQuestions = Int(snap.childrenCount)
-            self.generateQuestion()
-        }
-        
+        // COMMENT OUT LATER
+        //quizContainerView.isHidden = false
     }
     
     // Goes into building mode
@@ -164,9 +148,9 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         resetButton.isHidden = false
         doneButton.isHidden = false
         buildButton.isHidden = true
-        question.isHidden = true
-        answerView.isHidden = true
+        quizContainerView.isHidden = true
         itemView.isHidden = false
+        quizContainerView.isHidden = true
         inBuidingMode = true
     }
     
@@ -180,96 +164,12 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
-    
     @IBAction func reset(_ sender: UIButton) {
         self.resetSession()
     }
     
-    @IBAction func answer(_ sender: UIButton) {
-        
-        self.currentButton = sender
-        
-        // Darken selected button
-        currentButton?.alpha = 0.5
-        
-        // Disable choice selection
-        choiceView.isUserInteractionEnabled = false
-        
-        // Hide next button
-        nextButton.isHidden = false
-        
-        // Retrieve choice text
-        guard let choiceButtonPressed = sender.currentTitle else {return}
-        let choiceButton = "choice" + choiceButtonPressed
-        let choiceRef = roofRef.child("\(questionBranch)/qn\(questionID)/\(String(describing: choiceButton))")
-        choiceRef.observe(.value) { (snap: DataSnapshot) in
-            let choice = snap.value as? String
-            
-            // Check user choice against answer
-            self.checkAnswer(choice: choice!)
-        }
-        
-    }
-
-    @IBAction func next(_ sender: UIButton) {
-        
-        // Reset selected button
-        currentButton?.alpha = 1
-        
-        // Enable choice selection
-        choiceView.isUserInteractionEnabled = true
-        
-        // Unhide next button
-        nextButton.isHidden = true
-        
-        // Hide the tick or cross
-        self.resultImage.image = nil
-        
-        generateQuestion()
-    }
-    
-    @IBAction func back(_ sender: UIButton) {
-        question.isHidden = true
-        answerView.isHidden = true
-        
-        // Reset the question view
-        next(nextButton)
-    }
     
     //MARK: Functions
-    
-    func checkAnswer(choice: String) {
-        
-        // Retrieve answer
-        let answerRef = roofRef.child("\(questionBranch)/qn\(questionID)/answer")
-        answerRef.observe(.value) { (snap: DataSnapshot) in
-            let answer = snap.value as? String
-            
-            print("answer is: \(String(describing: snap.value)))")
-            
-            // Check if answer is correct
-            if choice == answer {
-                print("Correct!")
-                self.resultImage.image = UIImage(named: "Correct")
-            } else {
-                print("Wrong answer")
-                self.resultImage.image = UIImage(named: "Wrong")
-            }
-        }
-    }
-    
-    func generateQuestion() {
-        
-        // Get a new question
-        questionID = Int.random(in: 1...numberOfQuestions)
-        
-        // Set text for question label and for each choice label
-        labelTextFromFirebase(key: "question", label: self.question)
-        labelTextFromFirebase(key: "choiceA", label: self.labelA)
-        labelTextFromFirebase(key: "choiceB", label: self.labelB)
-        labelTextFromFirebase(key: "choiceC", label: self.labelC)
-        labelTextFromFirebase(key: "choiceD", label: self.labelD)
-    }
     
     func labelTextFromFirebase(key: String, label: UILabel) {
         
@@ -279,12 +179,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             label.text = snap.value as? String
         }
     }
-    //set object image when object is tapped for quiz section
-    func generateImage(objectID: String) {
-        let selectedImage = images[objectID]
-        self.objectImage.image = UIImage(named: selectedImage ?? "AppIcon")
-    }
-    
+ 
     func createObject(position: SCNVector3) {
         
         guard let createScene = SCNScene(named: objectScene) else {
@@ -305,7 +200,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         }
         self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
-    /*
+    
+    func hideQuizView () {
+        self.quizContainerView.isHidden = true
+    }
+    
     func createAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: {
@@ -314,6 +213,5 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         }))
         self.present(alert, animated: true, completion: nil)
     }
- */
 }
 

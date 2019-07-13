@@ -29,7 +29,7 @@ class animalViewController: UIViewController {
     }
     */
     @IBAction func dog(_ sender: UIButton) {
-        objectScene = "art.scnassets/beagle/Mesh_Beagle.scn"
+        objectScene = "art.scnassets/dog/dog.scn"
         objectNode = "animal"
     }
     
