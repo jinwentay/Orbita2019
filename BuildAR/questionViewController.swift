@@ -10,6 +10,8 @@ import UIKit
 import FirebaseDatabase
 import Firebase
 
+var quizViewController = questionViewController()
+
 class questionViewController: UIViewController {
 
     @IBOutlet weak var questionImage: UIImageView!
@@ -27,14 +29,20 @@ class questionViewController: UIViewController {
     let roofRef = Database.database().reference()
     var currentButton: UIButton? = nil
     
+    var images = ["animal": "Dog",
+                  "vehicle": "ship",
+                  "taxi": "taxi"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        quizViewController = self
 
         let dataRef = roofRef.child("\(questionBranch)")
         dataRef.observe(.value) { (snap: DataSnapshot) in
             self.generateQuestion()
         }
-        self.generateImage(objectID: objectName)
+        self.generateImage(objectID: questionBranch)
     }
     
     
@@ -94,21 +102,33 @@ class questionViewController: UIViewController {
     
     // MARK: Functions
     
+    public func generateQuestion() {
+        
+        self.generateImage(objectID: questionBranch)
+        
+        // Get new question number
+        let dataRef = roofRef.child("\(questionBranch)")
+        dataRef.observe(.value) { (snap: DataSnapshot) in
+            
+            // Get the number of questions in the catagory
+            numberOfQuestions = Int(snap.childrenCount)
+            questionID = Int.random(in: 1...numberOfQuestions)
+            
+            // Set text for question label and for each choice label
+            self.labelTextFromFirebase(key: "question", label: self.questionLabel)
+            self.labelTextFromFirebase(key: "choiceA", label: self.labelA)
+            self.labelTextFromFirebase(key: "choiceB", label: self.labelB)
+            self.labelTextFromFirebase(key: "choiceC", label: self.labelC)
+            self.labelTextFromFirebase(key: "choiceD", label: self.labelD)
+        }
+    }
+    
     //set object image when object is tapped for quiz section
     private func generateImage(objectID: String) {
         let selectedImage = images[objectID]
         self.questionImage.image = UIImage(named: selectedImage ?? "AppIcon")
     }
     
-    private func generateQuestion() {
-        
-        // Set text for question label and for each choice label
-        labelTextFromFirebase(key: "question", label: self.questionLabel)
-        labelTextFromFirebase(key: "choiceA", label: self.labelA)
-        labelTextFromFirebase(key: "choiceB", label: self.labelB)
-        labelTextFromFirebase(key: "choiceC", label: self.labelC)
-        labelTextFromFirebase(key: "choiceD", label: self.labelD)
-    }
     
     private func labelTextFromFirebase(key: String, label: UILabel) {
         

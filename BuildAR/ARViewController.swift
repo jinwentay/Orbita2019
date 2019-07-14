@@ -16,15 +16,10 @@ var mainViewController = ARViewController()
 
 var objectScene: String = ""
 var objectNode: String = ""
-var objectName: String = ""
 
-var questionBranch = "animal"
+var questionBranch = "animal" // Remove "animal" (for testing)
 var questionID = 0
-//var numberOfQuestions = 0
-
-var images = ["animal": "Dog",
-              "vehicle": "ship",
-              "taxi": "taxi"]
+var numberOfQuestions = 0
 
 class ARViewController: UIViewController, ARSCNViewDelegate {
     
@@ -89,15 +84,14 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         if !hitTest.isEmpty {
             let result = hitTest.first!
             let node = result.node
-            objectName = node.name ?? "AppIcon"
-            //print("tapped \(String(describing: objectName))")
+            questionBranch = node.name ?? "AppIcon"
             
             // In Buiding mode
             if inBuidingMode{
                 createObject(position: hitVector)
             }
             // In Quiz mode
-            else if objectSet.contains(objectName ) {
+            else if objectSet.contains(questionBranch) {
                 
                 // Rotate selected object
                 let action = SCNAction.rotateBy(x: 0, y: 1, z: 0, duration: 1)
@@ -105,18 +99,9 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
                 node.runAction(forever)
                 
                 // Show quiz
+                quizViewController.generateQuestion()
                 quizContainerView.isHidden = false
-                
-                // Set the catagory of question
-                questionBranch = objectName
-                let dataRef = roofRef.child("\(questionBranch)")
-                dataRef.observe(.value) { (snap: DataSnapshot) in
-                    
-                    // Get the number of questions in the catagory
-                    let numberOfQuestions = Int(snap.childrenCount)
-                    questionID = Int.random(in: 1...numberOfQuestions)
 
-                }
             }
             // No object tapped
             else {
@@ -171,15 +156,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     
     //MARK: Functions
     
-    func labelTextFromFirebase(key: String, label: UILabel) {
-        
-        // Retrieve text from Firebase
-        let referance = roofRef.child("\(questionBranch)/qn\(questionID)/\(key)")
-        referance.observe(.value) { (snap: DataSnapshot) in
-            label.text = snap.value as? String
-        }
-    }
- 
     func createObject(position: SCNVector3) {
         
         guard let createScene = SCNScene(named: objectScene) else {

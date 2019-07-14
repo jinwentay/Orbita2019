@@ -11,9 +11,6 @@ import UIKit
 class NavButtonCustom: UIButton {
     
     override func didMoveToWindow() {
-//        self.backgroundColor = UIColor.darkGray
-//        self.layer.cornerRadius = self.frame.height / 2
-//        self.setTitleColor(UIColor.white, for: .normal)
         if (self.currentTitle == "Reset") {
             self.layer.shadowColor = UIColor.black.cgColor
             self.layer.shadowRadius = 2
