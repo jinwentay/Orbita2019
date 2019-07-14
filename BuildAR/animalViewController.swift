@@ -10,9 +10,12 @@ import UIKit
 import SceneKit
 import ARKit
 
-class animalViewController: UIViewController {
+var selectedButton: UIButton?
 
+class animalViewController: UIViewController {
+    
     @IBOutlet weak var dogButton: createWorldCustom!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +34,34 @@ class animalViewController: UIViewController {
     @IBAction func dog(_ sender: UIButton) {
         objectScene = "art.scnassets/dog/dog.scn"
         objectNode = "animal"
+        
+        highlightButton(sender: sender)
     }
     
+    @IBAction func cat(_ sender: UIButton) {
+//        objectScene = "art.scnassets/dog/dog.scn"
+//        objectNode = "animal"
+        
+        highlightButton(sender: sender)
+    }
+    
+    @IBAction func zebra(_ sender: UIButton) {
+//        objectScene = "art.scnassets/dog/dog.scn"
+//        objectNode = "animal"
+        
+        highlightButton(sender: sender)
+    }
+    
+    @IBAction func lion(_ sender: UIButton) {
+//        objectScene = "art.scnassets/dog/dog.scn"
+//        objectNode = "animal"
+        
+        highlightButton(sender: sender)
+    }
+    
+    func highlightButton(sender: UIButton) {
+        selectedButton?.layer.borderColor = UIColor.white.cgColor
+        sender.layer.borderColor = UIColor.blue.cgColor
+        selectedButton = sender
+    }
 }

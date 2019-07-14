@@ -12,6 +12,7 @@ class vehiclesViewController: UIViewController {
 
     @IBOutlet weak var taxiButton: createWorldCustom!
     @IBOutlet weak var shipButton: createWorldCustom!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,10 +33,34 @@ class vehiclesViewController: UIViewController {
     @IBAction func ship(_ sender: UIButton) {
         objectScene = "art.scnassets/ship/ship.scn"
         objectNode = "vehicle"
+        
+        highlightButton(sender: sender)
     }
     
-    @IBAction func taxi(_ sender: Any) {
+    @IBAction func helicopter(_ sender: UIButton) {
+//        objectScene = "art.scnassets/ship/ship.scn"
+//        objectNode = "vehicle"
+        
+        highlightButton(sender: sender)
+    }
+    
+    @IBAction func taxi(_ sender: UIButton) {
         objectScene = "art.scnassets/taxi/taxi.scn"
         objectNode = "vehicle"
+        
+        highlightButton(sender: sender)
+    }
+    
+    @IBAction func train(_ sender: UIButton) {
+        //        objectScene = "art.scnassets/ship/ship.scn"
+        //        objectNode = "vehicle"
+        
+        highlightButton(sender: sender)
+    }
+    
+    func highlightButton(sender: UIButton) {
+        selectedButton?.layer.borderColor = UIColor.white.cgColor
+        sender.layer.borderColor = UIColor.blue.cgColor
+        selectedButton = sender
     }
 }

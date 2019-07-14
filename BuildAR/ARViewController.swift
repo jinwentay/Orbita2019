@@ -79,6 +79,10 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         let hitMat = SCNMatrix4(hitTransform)
         let hitVector = SCNVector3Make(hitMat.m41, hitMat.m42, hitMat.m43)
         
+        // Remove animations
+        self.sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
+            node.removeAllActions()
+        }
         
         // When the hit test is not empty
         if !hitTest.isEmpty {
@@ -90,20 +94,22 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             if inBuidingMode{
                 createObject(position: hitVector)
             }
-            // In Quiz mode
+                // In Quiz mode
             else if objectSet.contains(questionBranch) {
                 
                 // Rotate selected object
-                let action = SCNAction.rotateBy(x: 0, y: 1, z: 0, duration: 1)
-                let forever = SCNAction.repeatForever(action)
-                node.runAction(forever)
+                if node.animationKeys.isEmpty {
+                    let action = SCNAction.rotateBy(x: 0, y: 1, z: 0, duration: 1)
+                    let forever = SCNAction.repeatForever(action)
+                    node.runAction(forever)
+                }
                 
                 // Show quiz
                 quizViewController.generateQuestion()
                 quizContainerView.isHidden = false
-
+                
             }
-            // No object tapped
+                // No object tapped
             else {
                 quizContainerView.isHidden = true
                 //print("not object")
