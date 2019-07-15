@@ -17,11 +17,19 @@ var mainViewController = ARViewController()
 //var objectScene: String = ""
 //var objectNode: String = ""
 var objectScene = "art.scnassets/helicopter/helicopter.scn"
-var objectNode = "vehicle"
+var objectNode = "helicopter"
 
-var questionBranch = "animal" // Remove "animal" (for testing)
+var questionBranch = "dog" // Remove "animal" (for testing)
 var questionID = 0
 var numberOfQuestions = 0
+
+var sounds = ["dog":"dogbark",
+              "cat":"catmeow",
+              "zebra":"zebracall",
+              "lion":"liongrowl",
+              "spaceship":"alien",
+              "plane":"airplane",
+              "motorcycle":"motorcycle"]
 
 class ARViewController: UIViewController, ARSCNViewDelegate {
     
@@ -32,6 +40,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var buildButton: UIButton!
     @IBOutlet weak var quizContainerView: UIView!
+    @IBOutlet weak var playSoundButton: UIButton!
+    @IBOutlet weak var stopSoundButton: UIButton!
     
     @IBOutlet var sceneView: ARSCNView!
     
@@ -42,7 +52,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     var inBuidingMode: Bool = true
     var text = ""
     var currentButton: UIButton? = nil
-    
+    var audioplayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,6 +123,14 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
                     node.runAction(forever)
                 }
                 
+                //Add object's sound
+                let sound = Bundle.main.path(forResource: sounds[questionBranch], ofType: "mp3")
+                do {
+                    audioplayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+                    print("added dog sound")
+                } catch {
+                    print("error playing sound")
+                }
                 // Show quiz
                 quizViewController.generateQuestion()
                 quizContainerView.isHidden = false
@@ -138,6 +156,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         buildButton.isHidden = false
         itemView.isHidden = true
         inBuidingMode = false
+        playSoundButton.isHidden = false
+        stopSoundButton.isHidden = false
         
         // COMMENT OUT LATER
         //quizContainerView.isHidden = false
@@ -152,6 +172,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         itemView.isHidden = false
         quizContainerView.isHidden = true
         inBuidingMode = true
+        playSoundButton.isHidden = true
+        stopSoundButton.isHidden = true
     }
     
     @IBAction func switchItems(_ sender: UISegmentedControl) {
@@ -163,6 +185,16 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             vehicleView.alpha = 1
         }
     }
+    
+    @IBAction func playSound(_ sender: UIButton) {
+        print("playing sound")
+        audioplayer.play()
+    }
+    @IBAction func stopSound(_ sender: UIButton) {
+        print("stop playing sound")
+        audioplayer.stop()
+    }
+    
     
     @IBAction func reset(_ sender: UIButton) {
         self.resetSession()

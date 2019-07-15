@@ -167,6 +167,22 @@
                                     <segue destination="VPU-ID-iiy" kind="embed" id="4Et-TW-qFy"/>
                                 </connections>
                             </containerView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yae-lT-Bs2">
+                                <rect key="frame" x="80" y="333" width="39" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playSound:" destination="W1x-76-E25" eventType="touchUpInside" id="8he-Nz-Xw4"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Flq-zr-x18">
+                                <rect key="frame" x="127" y="333" width="39" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="stop"/>
+                                <connections>
+                                    <action selector="stopSound:" destination="W1x-76-E25" eventType="touchUpInside" id="0CM-7j-WjH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -195,9 +211,11 @@
                         <outlet property="buildButton" destination="D91-vx-lEu" id="Cgf-2H-MDX"/>
                         <outlet property="doneButton" destination="RnF-FU-vU0" id="Ee4-NO-eqo"/>
                         <outlet property="itemView" destination="bI9-75-LNl" id="et4-wv-eRe"/>
+                        <outlet property="playSoundButton" destination="Yae-lT-Bs2" id="4fz-1x-MFk"/>
                         <outlet property="quizContainerView" destination="C9q-mX-nJh" id="1A2-d4-g7A"/>
                         <outlet property="resetButton" destination="oYH-td-EEJ" id="JiV-8H-7UN"/>
                         <outlet property="sceneView" destination="OwZ-zl-hj4" id="Q5c-Jq-7KF"/>
+                        <outlet property="stopSoundButton" destination="Flq-zr-x18" id="mhc-EY-dwi"/>
                         <outlet property="vehicleView" destination="T43-he-rYi" id="Zio-E1-qkc"/>
                     </connections>
                 </viewController>
@@ -219,7 +237,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="kgZ-EU-MDk">
                                         <rect key="frame" x="0.0" y="0.0" width="209" height="90"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJ2-si-CF0" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJ2-si-CF0">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -231,7 +249,7 @@
                                                     <action selector="ship:" destination="HB1-HE-ycU" eventType="touchUpInside" id="r4e-Io-X9b"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXL-92-x5K" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXL-92-x5K">
                                                 <rect key="frame" x="119" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -248,7 +266,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="byE-k6-LAE">
                                         <rect key="frame" x="0.0" y="121" width="209" height="90"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEl-00-KVg" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEl-00-KVg">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -260,7 +278,7 @@
                                                     <action selector="taxi:" destination="HB1-HE-ycU" eventType="touchUpInside" id="c74-U2-Geg"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXY-ap-uDF" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXY-ap-uDF">
                                                 <rect key="frame" x="119" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -307,7 +325,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="oRa-qn-i7S">
                                         <rect key="frame" x="0.0" y="0.0" width="206" height="90"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKG-hx-1Lc" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKG-hx-1Lc">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -319,7 +337,7 @@
                                                     <action selector="dog:" destination="AFH-0J-EJz" eventType="touchUpInside" id="xgK-9U-Cbv"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPk-jr-Q8D" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPk-jr-Q8D">
                                                 <rect key="frame" x="116" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -336,7 +354,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="e32-gd-HIw">
                                         <rect key="frame" x="0.0" y="122" width="206" height="90"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkL-ke-huk" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkL-ke-huk">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -348,7 +366,7 @@
                                                     <action selector="zebra:" destination="AFH-0J-EJz" eventType="touchUpInside" id="Nl6-Dr-Wfk"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eph-at-K33" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eph-at-K33">
                                                 <rect key="frame" x="116" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -400,7 +418,7 @@
                                                     <constraint firstAttribute="width" constant="72" id="Zd0-F5-YRY"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qz-ZS-fGn">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qz-ZS-fGn">
                                                 <rect key="frame" x="72" y="0.0" width="163" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="Ihr-T7-TJc"/>
@@ -430,7 +448,7 @@
                                                             <action selector="choice:" destination="VPU-ID-iiy" eventType="touchUpInside" id="QNL-g7-iX9"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3da-Ih-76l">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3da-Ih-76l">
                                                         <rect key="frame" x="90" y="0.0" width="145" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="9ll-RZ-07C"/>
@@ -458,7 +476,7 @@
                                                             <action selector="choice:" destination="VPU-ID-iiy" eventType="touchUpInside" id="yo0-zA-q51"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bs0-vm-HlE">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bs0-vm-HlE">
                                                         <rect key="frame" x="90" y="0.0" width="145" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="7e2-zC-uWU"/>
@@ -486,7 +504,7 @@
                                                             <action selector="choice:" destination="VPU-ID-iiy" eventType="touchUpInside" id="N4z-Zj-6cs"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vY0-rg-g6c">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vY0-rg-g6c">
                                                         <rect key="frame" x="90" y="0.0" width="145" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="svQ-ly-IJc"/>
@@ -514,7 +532,7 @@
                                                             <action selector="choice:" destination="VPU-ID-iiy" eventType="touchUpInside" id="wBT-m6-OSv"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0a-jj-X7U">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0a-jj-X7U">
                                                         <rect key="frame" x="90" y="0.0" width="145" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Wol-aD-R8w"/>
@@ -615,8 +633,10 @@
         <image name="cat" width="288" height="216"/>
         <image name="helicopter" width="288" height="216"/>
         <image name="lion" width="288" height="216"/>
+        <image name="play" width="256" height="256"/>
         <image name="quiz" width="256" height="256"/>
         <image name="ship" width="357" height="273"/>
+        <image name="stop" width="256" height="256"/>
         <image name="taxi" width="288" height="216"/>
         <image name="train" width="288" height="216"/>
         <image name="zebra" width="288" height="216"/>
