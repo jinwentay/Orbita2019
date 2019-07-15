@@ -14,8 +14,10 @@ import Firebase
 
 var mainViewController = ARViewController()
 
-var objectScene: String = ""
-var objectNode: String = ""
+//var objectScene: String = ""
+//var objectNode: String = ""
+var objectScene = "art.scnassets/helicopter/helicopter.scn"
+var objectNode = "vehicle"
 
 var questionBranch = "animal" // Remove "animal" (for testing)
 var questionID = 0
@@ -58,6 +60,9 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         // Settings for buttons
         doneButton.layer.cornerRadius = doneButton.frame.height / 2
         buildButton.layer.cornerRadius = buildButton.frame.height / 2
+        
+//        let scene = SCNScene(named: "art.scnassets/train/train.scn")!
+//        sceneView.scene = scene
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -77,7 +82,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         }
         let hitTransform = hitResult.worldTransform
         let hitMat = SCNMatrix4(hitTransform)
-        let hitVector = SCNVector3Make(hitMat.m41, hitMat.m42, hitMat.m43)
+        var hitVector = SCNVector3Make(hitMat.m41, hitMat.m42, hitMat.m43)
         
         // Remove animations
         self.sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
@@ -92,6 +97,10 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             
             // In Buiding mode
             if inBuidingMode{
+                if objectScene == "art.scnassets/helicopter/helicopter.scn" {
+                    hitVector.x -= 0.93
+                    print("helicopter")
+                }
                 createObject(position: hitVector)
             }
                 // In Quiz mode
@@ -170,6 +179,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         guard let createNode = createScene.rootNode.childNode(withName: objectNode, recursively: true) else {
             return
         }
+        
         createNode.position = position
         sceneView.scene.rootNode.addChildNode(createNode)
         objectSet.insert(objectNode)
@@ -195,5 +205,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         }))
         self.present(alert, animated: true, completion: nil)
     }
+    
 }
 

@@ -39,22 +39,22 @@ class animalViewController: UIViewController {
     }
     
     @IBAction func cat(_ sender: UIButton) {
-//        objectScene = "art.scnassets/dog/dog.scn"
-//        objectNode = "animal"
+        objectScene = "art.scnassets/cat/cat.scn"
+        objectNode = "animal"
         
         highlightButton(sender: sender)
     }
     
     @IBAction func zebra(_ sender: UIButton) {
-//        objectScene = "art.scnassets/dog/dog.scn"
-//        objectNode = "animal"
+        objectScene = "art.scnassets/zebra/zebra.scn"
+        objectNode = "animal"
         
         highlightButton(sender: sender)
     }
     
     @IBAction func lion(_ sender: UIButton) {
-//        objectScene = "art.scnassets/dog/dog.scn"
-//        objectNode = "animal"
+        objectScene = "art.scnassets/lion/lion.scn"
+        objectNode = "animal"
         
         highlightButton(sender: sender)
     }
