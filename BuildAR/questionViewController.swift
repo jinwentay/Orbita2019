@@ -112,7 +112,9 @@ class questionViewController: UIViewController {
             
             // Get the number of questions in the catagory
             numberOfQuestions = Int(snap.childrenCount)
-            questionID = Int.random(in: 1...numberOfQuestions)
+            if numberOfQuestions > 0 {
+                questionID = Int.random(in: 1...numberOfQuestions)
+            }
             
             // Set text for question label and for each choice label
             self.labelTextFromFirebase(key: "question", label: self.questionLabel)

@@ -36,7 +36,6 @@
                                 </state>
                                 <connections>
                                     <action selector="create:" destination="BV1-FR-VrT" eventType="touchUpInside" id="vye-7C-gBH"/>
-                                    <segue destination="W1x-76-E25" kind="show" id="6oc-Ci-Jou"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,10 +53,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QT0-h8-hfW"/>
                     </view>
+                    <connections>
+                        <segue destination="W1x-76-E25" kind="show" identifier="createAR" id="F4l-lS-cFg"/>
+                        <segue destination="28G-Bc-cOc" kind="show" identifier="createScene" id="S1C-JZ-4wm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-115" y="-614"/>
+            <point key="canvasLocation" x="-126" y="-830"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bIF-vd-bxW">
@@ -167,9 +170,21 @@
                                     <segue destination="VPU-ID-iiy" kind="embed" id="4Et-TW-qFy"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmr-RD-bIy">
+                                <rect key="frame" x="846" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Bcf-6T-6XQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="csu-GL-peZ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Settings"/>
+                                <connections>
+                                    <segue destination="0oo-U1-Uit" kind="show" id="2Lo-uc-I32"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zmr-RD-bIy" secondAttribute="trailing" constant="20" id="0W9-Zv-qRj"/>
                             <constraint firstItem="D91-vx-lEu" firstAttribute="leading" secondItem="aTh-Cc-reo" secondAttribute="leading" constant="20" id="0wI-eT-psf"/>
                             <constraint firstAttribute="bottom" secondItem="OwZ-zl-hj4" secondAttribute="bottom" id="7xt-E4-66L"/>
                             <constraint firstItem="RnF-FU-vU0" firstAttribute="leading" secondItem="aTh-Cc-reo" secondAttribute="leading" constant="20" id="9WI-kM-rZh"/>
@@ -178,6 +193,7 @@
                             <constraint firstItem="D91-vx-lEu" firstAttribute="top" secondItem="aTh-Cc-reo" secondAttribute="top" constant="20" id="JAF-H4-L3a"/>
                             <constraint firstAttribute="bottom" secondItem="C9q-mX-nJh" secondAttribute="bottom" id="VJw-7q-DcK"/>
                             <constraint firstItem="bI9-75-LNl" firstAttribute="centerY" secondItem="C9q-mX-nJh" secondAttribute="centerY" id="XDs-0X-E29"/>
+                            <constraint firstItem="zmr-RD-bIy" firstAttribute="top" secondItem="aTh-Cc-reo" secondAttribute="top" constant="20" id="XrA-c8-Ntm"/>
                             <constraint firstItem="bI9-75-LNl" firstAttribute="centerX" secondItem="C9q-mX-nJh" secondAttribute="centerX" id="fsv-6Y-B0a"/>
                             <constraint firstAttribute="trailing" secondItem="bI9-75-LNl" secondAttribute="trailing" constant="20" id="jpg-r1-csa"/>
                             <constraint firstItem="OwZ-zl-hj4" firstAttribute="leading" secondItem="J0x-l7-BFX" secondAttribute="leading" id="o5F-ss-mty"/>
@@ -291,7 +307,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r54-bs-TIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-91" y="958"/>
+            <point key="canvasLocation" x="-115" y="935"/>
         </scene>
         <!--Animal View Controller-->
         <scene sceneID="0M0-fA-Fh9">
@@ -378,7 +394,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lYR-N5-Wi7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-245.08928571428569" y="957.97101449275374"/>
+            <point key="canvasLocation" x="-306" y="935"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="wgW-dz-tFy">
@@ -599,18 +615,122 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3yE-1d-EyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="1039"/>
+            <point key="canvasLocation" x="83" y="1016"/>
+        </scene>
+        <!--Scene View Controller-->
+        <scene sceneID="4n3-ou-cGL">
+            <objects>
+                <viewController id="28G-Bc-cOc" customClass="SceneViewController" customModule="BuildAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="72w-8T-5xh">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQJ-cT-Umw">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </sceneKitView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lI7-D5-Gvp">
+                                <rect key="frame" x="846" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="OcR-p4-FsN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="n6O-B8-E15"/>
+                                    <constraint firstAttribute="height" constant="30" id="y0l-zc-HJ2"/>
+                                    <constraint firstAttribute="width" constant="30" id="yvD-OQ-rLq"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Settings"/>
+                                <connections>
+                                    <segue destination="0oo-U1-Uit" kind="show" id="ghR-hu-MKK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cQJ-cT-Umw" firstAttribute="top" secondItem="JLq-z8-Zsx" secondAttribute="top" id="Ifa-sQ-ceQ"/>
+                            <constraint firstAttribute="trailing" secondItem="cQJ-cT-Umw" secondAttribute="trailing" id="fsG-RX-5nE"/>
+                            <constraint firstAttribute="bottom" secondItem="cQJ-cT-Umw" secondAttribute="bottom" id="h8D-Lo-Lao"/>
+                            <constraint firstAttribute="trailing" secondItem="lI7-D5-Gvp" secondAttribute="trailing" constant="20" id="kTa-RT-1Tw"/>
+                            <constraint firstItem="lI7-D5-Gvp" firstAttribute="top" secondItem="JLq-z8-Zsx" secondAttribute="top" constant="20" id="lbF-2j-aw7"/>
+                            <constraint firstItem="cQJ-cT-Umw" firstAttribute="leading" secondItem="72w-8T-5xh" secondAttribute="leading" id="wjs-Qq-NWq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JLq-z8-Zsx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="faW-kY-VwY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="588" y="-794"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="WBJ-q2-PCX">
+            <objects>
+                <viewController id="0oo-U1-Uit" customClass="SettingsViewController" customModule="BuildAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rtV-xh-iHK">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWO-vm-TfF">
+                                <rect key="frame" x="64" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="FAS-4J-eIk"/>
+                                    <constraint firstAttribute="height" constant="30" id="eTl-TZ-Eph"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Back"/>
+                                <connections>
+                                    <action selector="back:" destination="0oo-U1-Uit" eventType="touchUpInside" id="gTk-wp-Ubh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgn-cd-ouI">
+                                <rect key="frame" x="714" y="20" width="118" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Change to Scene">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchToScene:" destination="0oo-U1-Uit" eventType="touchUpInside" id="gnh-Eb-BzA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlx-3S-6bt">
+                                <rect key="frame" x="726" y="363" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Change to AR">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchToAR:" destination="0oo-U1-Uit" eventType="touchUpInside" id="Qxy-d5-isn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sWO-vm-TfF" firstAttribute="top" secondItem="OOk-qT-ewH" secondAttribute="top" constant="20" id="25o-9D-ZGn"/>
+                            <constraint firstItem="Lgn-cd-ouI" firstAttribute="top" secondItem="OOk-qT-ewH" secondAttribute="top" constant="20" id="9Cp-C0-ePT"/>
+                            <constraint firstItem="sWO-vm-TfF" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="ezP-8j-L4y"/>
+                            <constraint firstItem="OOk-qT-ewH" firstAttribute="trailing" secondItem="Lgn-cd-ouI" secondAttribute="trailing" constant="20" id="zPv-GL-szc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OOk-qT-ewH"/>
+                    </view>
+                    <connections>
+                        <outlet property="changeToARButton" destination="jlx-3S-6bt" id="tNn-oy-dhJ"/>
+                        <outlet property="changeToSceneButton" destination="Lgn-cd-ouI" id="y5M-rb-l67"/>
+                        <segue destination="28G-Bc-cOc" kind="show" identifier="backToScene" id="QrQ-Mi-Tyc"/>
+                        <segue destination="W1x-76-E25" kind="show" identifier="backToAR" id="2QE-LB-aXt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RHe-T1-VJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="588" y="161"/>
         </scene>
     </scenes>
     <resources>
         <image name="1" width="426" height="240"/>
         <image name="A" width="250" height="210"/>
         <image name="B" width="840" height="525"/>
+        <image name="Back" width="256" height="256"/>
         <image name="BackButton" width="563.5" height="244.5"/>
         <image name="C" width="960" height="540"/>
         <image name="D" width="140" height="100"/>
         <image name="Dog" width="288" height="216"/>
         <image name="NextButton" width="563.5" height="243.5"/>
+        <image name="Settings" width="741" height="720"/>
         <image name="build" width="256" height="256"/>
         <image name="cat" width="288" height="216"/>
         <image name="helicopter" width="288" height="216"/>
@@ -621,4 +741,9 @@
         <image name="train" width="288" height="216"/>
         <image name="zebra" width="288" height="216"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ghR-hu-MKK"/>
+        <segue reference="QrQ-Mi-Tyc"/>
+        <segue reference="2QE-LB-aXt"/>
+    </inferredMetricsTieBreakers>
 </document>

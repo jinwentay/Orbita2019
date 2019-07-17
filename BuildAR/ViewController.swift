@@ -17,34 +17,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Upload an image
-        /*
-        let image = UIImage(named: "1")
-        let imageData = image?.jpegData(compressionQuality: 0.8)!
-        uploadImageToFirebaseStorage(data: imageData! as NSData)
-        */
- 
-        // Set the view's delegate
-       /* sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let scene = SCNScene()
-        
-        // Set the scene to the view
-        sceneView.scene = scene*/
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // Create a session configuration
-//        let configuration = ARWorldTrackingConfiguration()
-
-        // Run the view's session
-        //sceneView.session.run(configuration)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -68,32 +44,23 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // MARK: Actions
     @IBAction func create(_ sender: UIButton) {
 
-        //createAlert(title: "Choose your background", message: "Do you want to create your world in Augmented Reality?")
+        createAlert(title: "Choose your background", message: "Do you want to create your world in Augmented Reality?")
     }
     
+    
     // MARK: Functions
-    func uploadImageToFirebaseStorage(data: NSData) {
-        let storageRef = Storage.storage().reference(withPath: "myPics/demoPic.jpeg")
-        let uploadMeta = StorageMetadata()
-        uploadMeta.contentType = "image/jpeg"
-        storageRef.putData(data as Data, metadata: uploadMeta) { (metadata, error) in
-            if (error != nil) {
-                print("I received an error! \(String(describing: error?.localizedDescription))")
-            } else {
-                print("Upload complete! Here's some metadata! \(String(describing: metadata))")
-            }
-        }
-    }
     
     func createAlert(title: String, message: String) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { (action) in
-            alert.dismiss(animated: true, completion: nil)
+            self.performSegue(withIdentifier: "createScene", sender: self)
+            inARMode = false
         }))
         alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (action) in
-            alert.dismiss(animated: true, completion: nil)
+            self.performSegue(withIdentifier: "createAR", sender: self)
+            inARMode = true
         }))
         
         self.present(alert, animated: true, completion: nil)
