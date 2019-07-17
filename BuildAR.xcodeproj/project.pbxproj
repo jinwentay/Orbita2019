@@ -13,6 +13,20 @@
 		6EB9C38322DE1B98006B83F3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9C38222DE1B98006B83F3 /* SettingsViewController.swift */; };
 		6ECAAF3B22D41C6900ABB566 /* questionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECAAF3A22D41C6900ABB566 /* questionViewController.swift */; };
 		6EE7CCA122B91F4400E137E9 /* NavButtonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7CCA022B91F4400E137E9 /* NavButtonCustom.swift */; };
+		C530A7C322DCD57D007A81D6 /* dogbark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7C222DCD57D007A81D6 /* dogbark.mp3 */; };
+		C530A7C422DCD57D007A81D6 /* dogbark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7C222DCD57D007A81D6 /* dogbark.mp3 */; };
+		C530A7C622DCE440007A81D6 /* catmeow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7C522DCE440007A81D6 /* catmeow.mp3 */; };
+		C530A7C722DCE440007A81D6 /* catmeow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7C522DCE440007A81D6 /* catmeow.mp3 */; };
+		C530A7C922DCE467007A81D6 /* zebracall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7C822DCE467007A81D6 /* zebracall.mp3 */; };
+		C530A7CA22DCE467007A81D6 /* zebracall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7C822DCE467007A81D6 /* zebracall.mp3 */; };
+		C530A7CC22DCE480007A81D6 /* airplane.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7CB22DCE480007A81D6 /* airplane.mp3 */; };
+		C530A7CD22DCE480007A81D6 /* airplane.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7CB22DCE480007A81D6 /* airplane.mp3 */; };
+		C530A7CF22DCE489007A81D6 /* motorcycle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7CE22DCE489007A81D6 /* motorcycle.mp3 */; };
+		C530A7D022DCE489007A81D6 /* motorcycle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7CE22DCE489007A81D6 /* motorcycle.mp3 */; };
+		C530A7D222DCE490007A81D6 /* liongrowl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7D122DCE490007A81D6 /* liongrowl.mp3 */; };
+		C530A7D322DCE490007A81D6 /* liongrowl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7D122DCE490007A81D6 /* liongrowl.mp3 */; };
+		C530A7D522DCE49F007A81D6 /* alien.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7D422DCE49F007A81D6 /* alien.mp3 */; };
+		C530A7D622DCE49F007A81D6 /* alien.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7D422DCE49F007A81D6 /* alien.mp3 */; };
 		C592B26222C50A9E0075FB2D /* animalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26122C50A9D0075FB2D /* animalViewController.swift */; };
 		C592B26422C50AE50075FB2D /* vehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26322C50AE50075FB2D /* vehiclesViewController.swift */; };
 		C592B26622C75D910075FB2D /* questionCustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26522C75D910075FB2D /* questionCustomLabel.swift */; };
@@ -46,6 +60,13 @@
 		6EB9C38222DE1B98006B83F3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6ECAAF3A22D41C6900ABB566 /* questionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionViewController.swift; sourceTree = "<group>"; };
 		6EE7CCA022B91F4400E137E9 /* NavButtonCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavButtonCustom.swift; sourceTree = "<group>"; };
+		C530A7C222DCD57D007A81D6 /* dogbark.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dogbark.mp3; path = ../../../dogbark.mp3; sourceTree = "<group>"; };
+		C530A7C522DCE440007A81D6 /* catmeow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = catmeow.mp3; path = ../../../catmeow.mp3; sourceTree = "<group>"; };
+		C530A7C822DCE467007A81D6 /* zebracall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = zebracall.mp3; path = ../../../zebracall.mp3; sourceTree = "<group>"; };
+		C530A7CB22DCE480007A81D6 /* airplane.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = airplane.mp3; path = ../../../airplane.mp3; sourceTree = "<group>"; };
+		C530A7CE22DCE489007A81D6 /* motorcycle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = motorcycle.mp3; path = ../../../motorcycle.mp3; sourceTree = "<group>"; };
+		C530A7D122DCE490007A81D6 /* liongrowl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = liongrowl.mp3; path = ../../../liongrowl.mp3; sourceTree = "<group>"; };
+		C530A7D422DCE49F007A81D6 /* alien.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alien.mp3; path = ../../../alien.mp3; sourceTree = "<group>"; };
 		C592B26122C50A9D0075FB2D /* animalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animalViewController.swift; sourceTree = "<group>"; };
 		C592B26322C50AE50075FB2D /* vehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vehiclesViewController.swift; sourceTree = "<group>"; };
 		C592B26522C75D910075FB2D /* questionCustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionCustomLabel.swift; sourceTree = "<group>"; };
@@ -108,6 +129,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C530A7C122DCD561007A81D6 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C530A7C222DCD57D007A81D6 /* dogbark.mp3 */,
+				C530A7C522DCE440007A81D6 /* catmeow.mp3 */,
+				C530A7C822DCE467007A81D6 /* zebracall.mp3 */,
+				C530A7D122DCE490007A81D6 /* liongrowl.mp3 */,
+				C530A7D422DCE49F007A81D6 /* alien.mp3 */,
+				C530A7CB22DCE480007A81D6 /* airplane.mp3 */,
+				C530A7CE22DCE489007A81D6 /* motorcycle.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		C5EB579422A7B8A600D6A6DA = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +166,7 @@
 		C5EB579F22A7B8A600D6A6DA /* BuildAR */ = {
 			isa = PBXGroup;
 			children = (
+				C530A7C122DCD561007A81D6 /* Sounds */,
 				C5EB57A022A7B8A600D6A6DA /* AppDelegate.swift */,
 				C5EB57A922A7B8A700D6A6DA /* Assets.xcassets */,
 				C5EB57A222A7B8A600D6A6DA /* art.scnassets */,
@@ -245,10 +281,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C530A7C922DCE467007A81D6 /* zebracall.mp3 in Resources */,
 				C5EB57A322A7B8A600D6A6DA /* art.scnassets in Resources */,
+				C530A7D222DCE490007A81D6 /* liongrowl.mp3 in Resources */,
+				C530A7C322DCD57D007A81D6 /* dogbark.mp3 in Resources */,
+				C530A7CC22DCE480007A81D6 /* airplane.mp3 in Resources */,
 				C5EB57AD22A7B8A700D6A6DA /* LaunchScreen.storyboard in Resources */,
 				6E21087122B70AE50016A60B /* GoogleService-Info.plist in Resources */,
 				C5EB57AA22A7B8A700D6A6DA /* Assets.xcassets in Resources */,
+				C530A7C622DCE440007A81D6 /* catmeow.mp3 in Resources */,
+				C530A7D522DCE49F007A81D6 /* alien.mp3 in Resources */,
+				C530A7CF22DCE489007A81D6 /* motorcycle.mp3 in Resources */,
 				C5EB57A822A7B8A600D6A6DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +300,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C530A7CD22DCE480007A81D6 /* airplane.mp3 in Resources */,
+				C530A7C422DCD57D007A81D6 /* dogbark.mp3 in Resources */,
+				C530A7D322DCE490007A81D6 /* liongrowl.mp3 in Resources */,
+				C530A7C722DCE440007A81D6 /* catmeow.mp3 in Resources */,
+				C530A7D022DCE489007A81D6 /* motorcycle.mp3 in Resources */,
+				C530A7D622DCE49F007A81D6 /* alien.mp3 in Resources */,
+				C530A7CA22DCE467007A81D6 /* zebracall.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,13 +555,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S5RVQLHWL6;
+				DEVELOPMENT_TEAM = PZ3QS5B7V5;
 				INFOPLIST_FILE = BuildAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.BuildAR-Shannon";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BuildAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -524,13 +574,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S5RVQLHWL6;
+				DEVELOPMENT_TEAM = PZ3QS5B7V5;
 				INFOPLIST_FILE = BuildAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.BuildAR-Shannon";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BuildAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

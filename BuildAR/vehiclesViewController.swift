@@ -32,28 +32,28 @@ class vehiclesViewController: UIViewController {
 
     @IBAction func ship(_ sender: UIButton) {
         objectScene = "art.scnassets/ship/ship.scn"
-        objectNode = "vehicle"
+        objectNode = "spaceship"
         
         highlightButton(sender: sender)
     }
     
     @IBAction func helicopter(_ sender: UIButton) {
         objectScene = "art.scnassets/helicopter/helicopter.scn"
-        objectNode = "vehicle"
+        objectNode = "helicopter"
         
         highlightButton(sender: sender)
     }
     
     @IBAction func taxi(_ sender: UIButton) {
         objectScene = "art.scnassets/taxi/taxi.scn"
-        objectNode = "vehicle"
+        objectNode = "taxi"
         
         highlightButton(sender: sender)
     }
     
     @IBAction func train(_ sender: UIButton) {
                 objectScene = "art.scnassets/train/train.scn"
-                objectNode = "vehicle"
+                objectNode = "train"
         
         highlightButton(sender: sender)
     }

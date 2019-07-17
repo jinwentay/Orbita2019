@@ -29,9 +29,13 @@ class questionViewController: UIViewController {
     let roofRef = Database.database().reference()
     var currentButton: UIButton? = nil
     
-    var images = ["animal": "Dog",
-                  "vehicle": "ship",
-                  "taxi": "taxi"]
+    var images = ["dog": "Dog",
+                  "spaceship": "ship",
+                  "taxi": "taxi",
+                  "zebra":"zebra",
+                  "lion": "lion",
+                  "cat": "cat",
+                  "train": "train"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
