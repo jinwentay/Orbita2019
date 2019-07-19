@@ -9,24 +9,11 @@
 /* Begin PBXBuildFile section */
 		6E21087122B70AE50016A60B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E21087022B70AE50016A60B /* GoogleService-Info.plist */; };
 		6E45CEBF22AF5AA300CECA09 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E45CEBE22AF5AA300CECA09 /* ARViewController.swift */; };
+		6E64BEB822DF685800844668 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E64BEB722DF685800844668 /* SceneKit.framework */; };
 		6EB9C38122DE1B86006B83F3 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9C38022DE1B86006B83F3 /* SceneViewController.swift */; };
 		6EB9C38322DE1B98006B83F3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9C38222DE1B98006B83F3 /* SettingsViewController.swift */; };
 		6ECAAF3B22D41C6900ABB566 /* questionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECAAF3A22D41C6900ABB566 /* questionViewController.swift */; };
 		6EE7CCA122B91F4400E137E9 /* NavButtonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7CCA022B91F4400E137E9 /* NavButtonCustom.swift */; };
-		C530A7C322DCD57D007A81D6 /* dogbark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7C222DCD57D007A81D6 /* dogbark.mp3 */; };
-		C530A7C422DCD57D007A81D6 /* dogbark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7C222DCD57D007A81D6 /* dogbark.mp3 */; };
-		C530A7C622DCE440007A81D6 /* catmeow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7C522DCE440007A81D6 /* catmeow.mp3 */; };
-		C530A7C722DCE440007A81D6 /* catmeow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7C522DCE440007A81D6 /* catmeow.mp3 */; };
-		C530A7C922DCE467007A81D6 /* zebracall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7C822DCE467007A81D6 /* zebracall.mp3 */; };
-		C530A7CA22DCE467007A81D6 /* zebracall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7C822DCE467007A81D6 /* zebracall.mp3 */; };
-		C530A7CC22DCE480007A81D6 /* airplane.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7CB22DCE480007A81D6 /* airplane.mp3 */; };
-		C530A7CD22DCE480007A81D6 /* airplane.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7CB22DCE480007A81D6 /* airplane.mp3 */; };
-		C530A7CF22DCE489007A81D6 /* motorcycle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7CE22DCE489007A81D6 /* motorcycle.mp3 */; };
-		C530A7D022DCE489007A81D6 /* motorcycle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7CE22DCE489007A81D6 /* motorcycle.mp3 */; };
-		C530A7D222DCE490007A81D6 /* liongrowl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7D122DCE490007A81D6 /* liongrowl.mp3 */; };
-		C530A7D322DCE490007A81D6 /* liongrowl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7D122DCE490007A81D6 /* liongrowl.mp3 */; };
-		C530A7D522DCE49F007A81D6 /* alien.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7D422DCE49F007A81D6 /* alien.mp3 */; };
-		C530A7D622DCE49F007A81D6 /* alien.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C530A7D422DCE49F007A81D6 /* alien.mp3 */; };
 		C592B26222C50A9E0075FB2D /* animalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26122C50A9D0075FB2D /* animalViewController.swift */; };
 		C592B26422C50AE50075FB2D /* vehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26322C50AE50075FB2D /* vehiclesViewController.swift */; };
 		C592B26622C75D910075FB2D /* questionCustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26522C75D910075FB2D /* questionCustomLabel.swift */; };
@@ -56,17 +43,11 @@
 		1C6E7CC7E9C6C9ACFEF5F620 /* Pods-BuildAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuildAR.release.xcconfig"; path = "Target Support Files/Pods-BuildAR/Pods-BuildAR.release.xcconfig"; sourceTree = "<group>"; };
 		6E21087022B70AE50016A60B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E45CEBE22AF5AA300CECA09 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		6E64BEB722DF685800844668 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		6EB9C38022DE1B86006B83F3 /* SceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		6EB9C38222DE1B98006B83F3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6ECAAF3A22D41C6900ABB566 /* questionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionViewController.swift; sourceTree = "<group>"; };
 		6EE7CCA022B91F4400E137E9 /* NavButtonCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavButtonCustom.swift; sourceTree = "<group>"; };
-		C530A7C222DCD57D007A81D6 /* dogbark.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dogbark.mp3; path = ../../../dogbark.mp3; sourceTree = "<group>"; };
-		C530A7C522DCE440007A81D6 /* catmeow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = catmeow.mp3; path = ../../../catmeow.mp3; sourceTree = "<group>"; };
-		C530A7C822DCE467007A81D6 /* zebracall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = zebracall.mp3; path = ../../../zebracall.mp3; sourceTree = "<group>"; };
-		C530A7CB22DCE480007A81D6 /* airplane.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = airplane.mp3; path = ../../../airplane.mp3; sourceTree = "<group>"; };
-		C530A7CE22DCE489007A81D6 /* motorcycle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = motorcycle.mp3; path = ../../../motorcycle.mp3; sourceTree = "<group>"; };
-		C530A7D122DCE490007A81D6 /* liongrowl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = liongrowl.mp3; path = ../../../liongrowl.mp3; sourceTree = "<group>"; };
-		C530A7D422DCE49F007A81D6 /* alien.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alien.mp3; path = ../../../alien.mp3; sourceTree = "<group>"; };
 		C592B26122C50A9D0075FB2D /* animalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animalViewController.swift; sourceTree = "<group>"; };
 		C592B26322C50AE50075FB2D /* vehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vehiclesViewController.swift; sourceTree = "<group>"; };
 		C592B26522C75D910075FB2D /* questionCustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionCustomLabel.swift; sourceTree = "<group>"; };
@@ -94,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E64BEB822DF685800844668 /* SceneKit.framework in Frameworks */,
 				FEA4971871DA08782BC85E44 /* Pods_BuildAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +94,7 @@
 		83B1007752E358DA34F08C3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E64BEB722DF685800844668 /* SceneKit.framework */,
 				E63A09EB507D826F7B4A07E5 /* Pods_BuildAR.framework */,
 				D50D8045C3697A9C0A0CCF5C /* Pods_BuildARTests.framework */,
 			);
@@ -127,20 +110,6 @@
 				E4AFA6A9CE2B995FD7715E46 /* Pods-BuildARTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		C530A7C122DCD561007A81D6 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				C530A7C222DCD57D007A81D6 /* dogbark.mp3 */,
-				C530A7C522DCE440007A81D6 /* catmeow.mp3 */,
-				C530A7C822DCE467007A81D6 /* zebracall.mp3 */,
-				C530A7D122DCE490007A81D6 /* liongrowl.mp3 */,
-				C530A7D422DCE49F007A81D6 /* alien.mp3 */,
-				C530A7CB22DCE480007A81D6 /* airplane.mp3 */,
-				C530A7CE22DCE489007A81D6 /* motorcycle.mp3 */,
-			);
-			path = Sounds;
 			sourceTree = "<group>";
 		};
 		C5EB579422A7B8A600D6A6DA = {
@@ -166,7 +135,6 @@
 		C5EB579F22A7B8A600D6A6DA /* BuildAR */ = {
 			isa = PBXGroup;
 			children = (
-				C530A7C122DCD561007A81D6 /* Sounds */,
 				C5EB57A022A7B8A600D6A6DA /* AppDelegate.swift */,
 				C5EB57A922A7B8A700D6A6DA /* Assets.xcassets */,
 				C5EB57A222A7B8A600D6A6DA /* art.scnassets */,
@@ -281,17 +249,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C530A7C922DCE467007A81D6 /* zebracall.mp3 in Resources */,
 				C5EB57A322A7B8A600D6A6DA /* art.scnassets in Resources */,
-				C530A7D222DCE490007A81D6 /* liongrowl.mp3 in Resources */,
-				C530A7C322DCD57D007A81D6 /* dogbark.mp3 in Resources */,
-				C530A7CC22DCE480007A81D6 /* airplane.mp3 in Resources */,
 				C5EB57AD22A7B8A700D6A6DA /* LaunchScreen.storyboard in Resources */,
 				6E21087122B70AE50016A60B /* GoogleService-Info.plist in Resources */,
 				C5EB57AA22A7B8A700D6A6DA /* Assets.xcassets in Resources */,
-				C530A7C622DCE440007A81D6 /* catmeow.mp3 in Resources */,
-				C530A7D522DCE49F007A81D6 /* alien.mp3 in Resources */,
-				C530A7CF22DCE489007A81D6 /* motorcycle.mp3 in Resources */,
 				C5EB57A822A7B8A600D6A6DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,13 +261,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C530A7CD22DCE480007A81D6 /* airplane.mp3 in Resources */,
-				C530A7C422DCD57D007A81D6 /* dogbark.mp3 in Resources */,
-				C530A7D322DCE490007A81D6 /* liongrowl.mp3 in Resources */,
-				C530A7C722DCE440007A81D6 /* catmeow.mp3 in Resources */,
-				C530A7D022DCE489007A81D6 /* motorcycle.mp3 in Resources */,
-				C530A7D622DCE49F007A81D6 /* alien.mp3 in Resources */,
-				C530A7CA22DCE467007A81D6 /* zebracall.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -639,13 +639,10 @@
         <scene sceneID="4n3-ou-cGL">
             <objects>
                 <viewController id="28G-Bc-cOc" customClass="SceneViewController" customModule="BuildAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="72w-8T-5xh">
+                    <view key="view" contentMode="scaleToFill" id="72w-8T-5xh" customClass="SCNView">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQJ-cT-Umw">
-                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                            </sceneKitView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lI7-D5-Gvp">
                                 <rect key="frame" x="846" y="20" width="30" height="30"/>
                                 <constraints>
@@ -662,12 +659,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cQJ-cT-Umw" firstAttribute="top" secondItem="JLq-z8-Zsx" secondAttribute="top" id="Ifa-sQ-ceQ"/>
-                            <constraint firstAttribute="trailing" secondItem="cQJ-cT-Umw" secondAttribute="trailing" id="fsG-RX-5nE"/>
-                            <constraint firstAttribute="bottom" secondItem="cQJ-cT-Umw" secondAttribute="bottom" id="h8D-Lo-Lao"/>
                             <constraint firstAttribute="trailing" secondItem="lI7-D5-Gvp" secondAttribute="trailing" constant="20" id="kTa-RT-1Tw"/>
                             <constraint firstItem="lI7-D5-Gvp" firstAttribute="top" secondItem="JLq-z8-Zsx" secondAttribute="top" constant="20" id="lbF-2j-aw7"/>
-                            <constraint firstItem="cQJ-cT-Umw" firstAttribute="leading" secondItem="72w-8T-5xh" secondAttribute="leading" id="wjs-Qq-NWq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JLq-z8-Zsx"/>
                     </view>
