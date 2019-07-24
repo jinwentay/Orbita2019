@@ -195,7 +195,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     
     
     @IBAction func reset(_ sender: UIButton) {
-        self.resetSession()
+        self.sceneView.session.pause()
+        self.sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
+            node.removeFromParentNode()
+        }
+        self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
     
     
