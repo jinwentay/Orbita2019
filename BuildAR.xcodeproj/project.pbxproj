@@ -14,6 +14,13 @@
 		6EB9C38322DE1B98006B83F3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9C38222DE1B98006B83F3 /* SettingsViewController.swift */; };
 		6ECAAF3B22D41C6900ABB566 /* questionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECAAF3A22D41C6900ABB566 /* questionViewController.swift */; };
 		6EE7CCA122B91F4400E137E9 /* NavButtonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE7CCA022B91F4400E137E9 /* NavButtonCustom.swift */; };
+		6EED37F422E1A84D0075F406 /* airplaine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EED37ED22E1A84D0075F406 /* airplaine.mp3 */; };
+		6EED37F522E1A84D0075F406 /* liongrowl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EED37EE22E1A84D0075F406 /* liongrowl.mp3 */; };
+		6EED37F622E1A84D0075F406 /* zebracall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EED37EF22E1A84D0075F406 /* zebracall.mp3 */; };
+		6EED37F722E1A84D0075F406 /* motocycle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EED37F022E1A84D0075F406 /* motocycle.mp3 */; };
+		6EED37F822E1A84D0075F406 /* alien.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EED37F122E1A84D0075F406 /* alien.mp3 */; };
+		6EED37F922E1A84D0075F406 /* catmeow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EED37F222E1A84D0075F406 /* catmeow.mp3 */; };
+		6EED37FA22E1A84D0075F406 /* dogbark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EED37F322E1A84D0075F406 /* dogbark.mp3 */; };
 		C592B26222C50A9E0075FB2D /* animalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26122C50A9D0075FB2D /* animalViewController.swift */; };
 		C592B26422C50AE50075FB2D /* vehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26322C50AE50075FB2D /* vehiclesViewController.swift */; };
 		C592B26622C75D910075FB2D /* questionCustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26522C75D910075FB2D /* questionCustomLabel.swift */; };
@@ -48,6 +55,13 @@
 		6EB9C38222DE1B98006B83F3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6ECAAF3A22D41C6900ABB566 /* questionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionViewController.swift; sourceTree = "<group>"; };
 		6EE7CCA022B91F4400E137E9 /* NavButtonCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavButtonCustom.swift; sourceTree = "<group>"; };
+		6EED37ED22E1A84D0075F406 /* airplaine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = airplaine.mp3; sourceTree = "<group>"; };
+		6EED37EE22E1A84D0075F406 /* liongrowl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = liongrowl.mp3; sourceTree = "<group>"; };
+		6EED37EF22E1A84D0075F406 /* zebracall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zebracall.mp3; sourceTree = "<group>"; };
+		6EED37F022E1A84D0075F406 /* motocycle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = motocycle.mp3; sourceTree = "<group>"; };
+		6EED37F122E1A84D0075F406 /* alien.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alien.mp3; sourceTree = "<group>"; };
+		6EED37F222E1A84D0075F406 /* catmeow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = catmeow.mp3; sourceTree = "<group>"; };
+		6EED37F322E1A84D0075F406 /* dogbark.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dogbark.mp3; sourceTree = "<group>"; };
 		C592B26122C50A9D0075FB2D /* animalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animalViewController.swift; sourceTree = "<group>"; };
 		C592B26322C50AE50075FB2D /* vehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vehiclesViewController.swift; sourceTree = "<group>"; };
 		C592B26522C75D910075FB2D /* questionCustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionCustomLabel.swift; sourceTree = "<group>"; };
@@ -91,6 +105,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6EED37EC22E1A84D0075F406 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				6EED37ED22E1A84D0075F406 /* airplaine.mp3 */,
+				6EED37EE22E1A84D0075F406 /* liongrowl.mp3 */,
+				6EED37EF22E1A84D0075F406 /* zebracall.mp3 */,
+				6EED37F022E1A84D0075F406 /* motocycle.mp3 */,
+				6EED37F122E1A84D0075F406 /* alien.mp3 */,
+				6EED37F222E1A84D0075F406 /* catmeow.mp3 */,
+				6EED37F322E1A84D0075F406 /* dogbark.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		83B1007752E358DA34F08C3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				C5EB57A022A7B8A600D6A6DA /* AppDelegate.swift */,
+				6EED37EC22E1A84D0075F406 /* Sounds */,
 				C5EB57A922A7B8A700D6A6DA /* Assets.xcassets */,
 				C5EB57A222A7B8A600D6A6DA /* art.scnassets */,
 				C5EB57A422A7B8A600D6A6DA /* ViewController.swift */,
@@ -249,11 +278,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EED37F522E1A84D0075F406 /* liongrowl.mp3 in Resources */,
+				6EED37F722E1A84D0075F406 /* motocycle.mp3 in Resources */,
+				6EED37F822E1A84D0075F406 /* alien.mp3 in Resources */,
 				C5EB57A322A7B8A600D6A6DA /* art.scnassets in Resources */,
 				C5EB57AD22A7B8A700D6A6DA /* LaunchScreen.storyboard in Resources */,
+				6EED37F622E1A84D0075F406 /* zebracall.mp3 in Resources */,
 				6E21087122B70AE50016A60B /* GoogleService-Info.plist in Resources */,
+				6EED37FA22E1A84D0075F406 /* dogbark.mp3 in Resources */,
 				C5EB57AA22A7B8A700D6A6DA /* Assets.xcassets in Resources */,
+				6EED37F422E1A84D0075F406 /* airplaine.mp3 in Resources */,
 				C5EB57A822A7B8A600D6A6DA /* Main.storyboard in Resources */,
+				6EED37F922E1A84D0075F406 /* catmeow.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

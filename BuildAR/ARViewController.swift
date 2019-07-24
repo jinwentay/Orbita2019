@@ -14,10 +14,8 @@ import Firebase
 
 var mainViewController = ARViewController()
 
-//var objectScene: String = ""
-//var objectNode: String = ""
-var objectScene = "art.scnassets/helicopter/helicopter.scn"
-var objectNode = "helicopter"
+var objectScene: String = ""
+var objectNode: String = ""
 
 var questionBranch = "dog" // Remove "animal" (for testing)
 var questionID = 0

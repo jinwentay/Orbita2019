@@ -52,8 +52,8 @@ class vehiclesViewController: UIViewController {
     }
     
     @IBAction func train(_ sender: UIButton) {
-                objectScene = "art.scnassets/train/train.scn"
-                objectNode = "train"
+        objectScene = "art.scnassets/train/train.scn"
+        objectNode = "train"
         
         highlightButton(sender: sender)
     }
