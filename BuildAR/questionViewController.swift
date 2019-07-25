@@ -97,7 +97,11 @@ class questionViewController: UIViewController {
     }
     
     @IBAction func back(_ sender: UIButton) {
-        mainViewController.hideQuizView()
+        if inARMode{
+            mainViewController.hideQuizView()
+        } else {
+            sceneViewController.hideQuizView()
+        }
         
         // Reset the question view
         next(nextButton)

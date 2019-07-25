@@ -35,7 +35,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var animalView: UIView!
     @IBOutlet weak var vehicleView: UIView!
     @IBOutlet weak var resetButton: UIButton!
-    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var quizButton: UIButton!
     @IBOutlet weak var buildButton: UIButton!
     @IBOutlet weak var quizContainerView: UIView!
     @IBOutlet weak var playSoundButton: UIButton!
@@ -50,6 +50,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     var inBuidingMode: Bool = true
     var text = ""
     var currentButton: UIButton? = nil
+    var selectedNode: SCNNode!
     var audioplayer = AVAudioPlayer()
     
     override func viewDidLoad() {
@@ -60,17 +61,15 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         self.sceneView.autoenablesDefaultLighting = true
         
         mainViewController = self
+        inARMode = true
         
         // Recognize taps
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         sceneView.addGestureRecognizer(tapGestureRecognizer)
         
         // Settings for buttons
-        doneButton.layer.cornerRadius = doneButton.frame.height / 2
+        quizButton.layer.cornerRadius = quizButton.frame.height / 2
         buildButton.layer.cornerRadius = buildButton.frame.height / 2
-        
-//        let scene = SCNScene(named: "art.scnassets/train/train.scn")!
-//        sceneView.scene = scene
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -101,12 +100,13 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         if !hitTest.isEmpty {
             let result = hitTest.first!
             let node = result.node
+            selectedNode = node
             questionBranch = node.name ?? "AppIcon"
             
             // In Buiding mode
             if inBuidingMode{
                 if objectScene == "art.scnassets/helicopter/helicopter.scn" {
-                    hitVector.x -= 0.93
+//                    hitVector.x -= 0.93
                     print("helicopter")
                 }
                 createObject(position: hitVector)
@@ -148,9 +148,9 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     //MARK: Actions
     
     // Goes into quiz mode
-    @IBAction func done(_ sender: UIButton) {
+    @IBAction func quiz(_ sender: UIButton) {
         resetButton.isHidden = true
-        doneButton.isHidden = true
+        quizButton.isHidden = true
         buildButton.isHidden = false
         itemView.isHidden = true
         inBuidingMode = false
@@ -164,11 +164,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     // Goes into building mode
     @IBAction func build(_ sender: UIButton) {
         resetButton.isHidden = false
-        doneButton.isHidden = false
+        quizButton.isHidden = false
         buildButton.isHidden = true
-        quizContainerView.isHidden = true
         itemView.isHidden = false
-        quizContainerView.isHidden = true
+        
+        hideQuizView()
         inBuidingMode = true
         playSoundButton.isHidden = true
         stopSoundButton.isHidden = true
@@ -229,6 +229,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     
     func hideQuizView () {
         self.quizContainerView.isHidden = true
+        selectedNode.removeAllActions()
     }
     
     func createAlert(title: String, message: String) {

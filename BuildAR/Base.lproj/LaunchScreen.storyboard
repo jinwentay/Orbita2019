@@ -18,15 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="S8g-rp-CPc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="S8g-rp-CPc">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BuildAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wz2-dQ-STF">
+                                <rect key="frame" x="352" y="175" width="192" height="64.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="54"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Wz2-dQ-STF" firstAttribute="centerY" secondItem="S8g-rp-CPc" secondAttribute="centerY" id="Bun-gc-wad"/>
                             <constraint firstItem="S8g-rp-CPc" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="WAa-4y-2KM"/>
                             <constraint firstItem="S8g-rp-CPc" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Y99-vA-tpq"/>
                             <constraint firstAttribute="trailing" secondItem="S8g-rp-CPc" secondAttribute="trailing" id="ah3-7Q-hMb"/>
+                            <constraint firstItem="Wz2-dQ-STF" firstAttribute="centerX" secondItem="S8g-rp-CPc" secondAttribute="centerX" id="iSS-fB-ZBE"/>
                             <constraint firstAttribute="bottom" secondItem="S8g-rp-CPc" secondAttribute="bottom" id="p0H-aU-FI1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -38,6 +46,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Launch" width="410.5" height="229.5"/>
+        <image name="Home" width="426" height="240"/>
     </resources>
 </document>
