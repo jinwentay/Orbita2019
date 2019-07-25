@@ -22,6 +22,10 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         changeToARButton.isHidden = inARMode
         changeToSceneButton.isHidden = !inARMode
+        
+        if inARMode {
+            mainViewController.reset(mainViewController.resetButton)
+        }
     }
     
     // MARK: Actions
