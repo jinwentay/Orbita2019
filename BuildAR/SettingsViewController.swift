@@ -11,6 +11,7 @@ import ARKit
 import Firebase
 
 var inARMode = true
+var questionLevel = ""
 
 class SettingsViewController: UIViewController {
     
@@ -21,6 +22,10 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         changeToARButton.isHidden = inARMode
         changeToSceneButton.isHidden = !inARMode
+        
+        if inARMode {
+            mainViewController.reset(mainViewController.resetButton)
+        }
     }
     
     // MARK: Actions
@@ -42,5 +47,12 @@ class SettingsViewController: UIViewController {
         changeToSceneButton.isHidden = false
         changeToARButton.isHidden = true
         performSegue(withIdentifier: "backToAR", sender: self)
+    }
+    @IBAction func switchLevel(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            questionLevel = "standard"
+        } else {
+            questionLevel = "advanced"
+        }
     }
 }

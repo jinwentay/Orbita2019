@@ -23,7 +23,7 @@ class createWorldCustom: UIButton {
     }
     
     func customizeButtons(){
-//        backgroundColor = UIColor.lightGray
+//        backgroundColor = UIColor.blue
         setTitleColor(UIColor.white, for: .normal)
         layer.cornerRadius = 10.0
         layer.borderWidth = 2.0
