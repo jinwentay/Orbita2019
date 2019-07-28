@@ -19,7 +19,9 @@ var objectNode: String = ""
 
 var questionBranch = "dog" // Remove "animal" (for testing)
 var questionID = 0
+var factID = 0
 var numberOfQuestions = 0
+var numberOfFacts = 0
 
 var sounds = ["dog":"dogbark",
               "cat":"catmeow",
@@ -38,8 +40,10 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var buildButton: UIButton!
     @IBOutlet weak var quizContainerView: UIView!
+    @IBOutlet weak var infoContainerView: UIView!
     @IBOutlet weak var playSoundButton: UIButton!
     @IBOutlet weak var stopSoundButton: UIButton!
+    @IBOutlet weak var infoButton: UIButton!
     
     @IBOutlet var sceneView: ARSCNView!
     
@@ -130,9 +134,16 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
                     print("error playing sound")
                 }
                 // Show quiz
+                if infoContainerView.isHidden == false {
+                    quizContainerView.isHidden = true
+                }
                 quizViewController.generateQuestion()
                 quizContainerView.isHidden = false
                 
+                infoViewController.generateFact()
+                if infoContainerView.isHidden == false {
+                    quizContainerView.isHidden = true
+                }
             }
                 // No object tapped
             else {
@@ -156,6 +167,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         inBuidingMode = false
         playSoundButton.isHidden = false
         stopSoundButton.isHidden = false
+        infoButton.isHidden = false
         
         // COMMENT OUT LATER
         //quizContainerView.isHidden = false
@@ -172,6 +184,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         inBuidingMode = true
         playSoundButton.isHidden = true
         stopSoundButton.isHidden = true
+        infoButton.isHidden = true
+        infoContainerView.isHidden = true
     }
     
     @IBAction func switchItems(_ sender: UISegmentedControl) {
@@ -193,6 +207,16 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         audioplayer.stop()
     }
     
+    @IBAction func showObjectInfo(_ sender: UIButton) {
+        if infoContainerView.isHidden == true {
+            infoContainerView.isHidden = false
+            quizContainerView.isHidden = true
+            infoViewController.generateFact()
+        } else if infoContainerView.isHidden == false {
+            infoContainerView.isHidden = true
+            quizContainerView.isHidden = false
+        }
+    }
     
     @IBAction func reset(_ sender: UIButton) {
         self.sceneView.session.pause()

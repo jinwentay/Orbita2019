@@ -61,7 +61,8 @@ class animalViewController: UIViewController {
     
     func highlightButton(sender: UIButton) {
         selectedButton?.layer.borderColor = UIColor.white.cgColor
-        sender.layer.borderColor = UIColor.blue.cgColor
+        sender.layer.borderColor = UIColor.darkGray.cgColor
+        sender.layer.borderWidth = 2.0
         selectedButton = sender
     }
 }

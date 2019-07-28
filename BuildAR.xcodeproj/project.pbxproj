@@ -21,6 +21,10 @@
 		6EED37F822E1A84D0075F406 /* alien.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EED37F122E1A84D0075F406 /* alien.mp3 */; };
 		6EED37F922E1A84D0075F406 /* catmeow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EED37F222E1A84D0075F406 /* catmeow.mp3 */; };
 		6EED37FA22E1A84D0075F406 /* dogbark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EED37F322E1A84D0075F406 /* dogbark.mp3 */; };
+		B1631BBC22EDAA47000BE73D /* DYKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631BBB22EDAA47000BE73D /* DYKViewController.swift */; };
+		B1631BBE22EDF47C000BE73D /* settingButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631BBD22EDF47C000BE73D /* settingButtons.swift */; };
+		B1631BC022EDF867000BE73D /* customLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631BBF22EDF867000BE73D /* customLabel.swift */; };
+		B1631BC222EDFE4F000BE73D /* customCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631BC122EDFE4F000BE73D /* customCardView.swift */; };
 		C592B26222C50A9E0075FB2D /* animalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26122C50A9D0075FB2D /* animalViewController.swift */; };
 		C592B26422C50AE50075FB2D /* vehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26322C50AE50075FB2D /* vehiclesViewController.swift */; };
 		C592B26622C75D910075FB2D /* questionCustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26522C75D910075FB2D /* questionCustomLabel.swift */; };
@@ -62,6 +66,10 @@
 		6EED37F122E1A84D0075F406 /* alien.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alien.mp3; sourceTree = "<group>"; };
 		6EED37F222E1A84D0075F406 /* catmeow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = catmeow.mp3; sourceTree = "<group>"; };
 		6EED37F322E1A84D0075F406 /* dogbark.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dogbark.mp3; sourceTree = "<group>"; };
+		B1631BBB22EDAA47000BE73D /* DYKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYKViewController.swift; sourceTree = "<group>"; };
+		B1631BBD22EDF47C000BE73D /* settingButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingButtons.swift; sourceTree = "<group>"; };
+		B1631BBF22EDF867000BE73D /* customLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customLabel.swift; sourceTree = "<group>"; };
+		B1631BC122EDFE4F000BE73D /* customCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCardView.swift; sourceTree = "<group>"; };
 		C592B26122C50A9D0075FB2D /* animalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animalViewController.swift; sourceTree = "<group>"; };
 		C592B26322C50AE50075FB2D /* vehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vehiclesViewController.swift; sourceTree = "<group>"; };
 		C592B26522C75D910075FB2D /* questionCustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionCustomLabel.swift; sourceTree = "<group>"; };
@@ -171,13 +179,17 @@
 				6E45CEBE22AF5AA300CECA09 /* ARViewController.swift */,
 				6EB9C38022DE1B86006B83F3 /* SceneViewController.swift */,
 				6EB9C38222DE1B98006B83F3 /* SettingsViewController.swift */,
+				B1631BBB22EDAA47000BE73D /* DYKViewController.swift */,
 				6ECAAF3A22D41C6900ABB566 /* questionViewController.swift */,
 				C592B26122C50A9D0075FB2D /* animalViewController.swift */,
 				C592B26322C50AE50075FB2D /* vehiclesViewController.swift */,
+				B1631BC122EDFE4F000BE73D /* customCardView.swift */,
 				C5EB57A622A7B8A600D6A6DA /* Main.storyboard */,
+				B1631BBF22EDF867000BE73D /* customLabel.swift */,
 				C5EB57AB22A7B8A700D6A6DA /* LaunchScreen.storyboard */,
 				C592B26522C75D910075FB2D /* questionCustomLabel.swift */,
 				6EE7CCA022B91F4400E137E9 /* NavButtonCustom.swift */,
+				B1631BBD22EDF47C000BE73D /* settingButtons.swift */,
 				C5EB582422A81C0C00D6A6DA /* createWorldCustom.swift */,
 				C5EB57AE22A7B8A700D6A6DA /* Info.plist */,
 				6E21087022B70AE50016A60B /* GoogleService-Info.plist */,
@@ -371,7 +383,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1631BBE22EDF47C000BE73D /* settingButtons.swift in Sources */,
 				6ECAAF3B22D41C6900ABB566 /* questionViewController.swift in Sources */,
+				B1631BC222EDFE4F000BE73D /* customCardView.swift in Sources */,
+				B1631BBC22EDAA47000BE73D /* DYKViewController.swift in Sources */,
+				B1631BC022EDF867000BE73D /* customLabel.swift in Sources */,
 				C592B26422C50AE50075FB2D /* vehiclesViewController.swift in Sources */,
 				6EB9C38322DE1B98006B83F3 /* SettingsViewController.swift in Sources */,
 				C5EB582522A81C0C00D6A6DA /* createWorldCustom.swift in Sources */,
@@ -545,13 +561,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S5RVQLHWL6;
+				DEVELOPMENT_TEAM = PZ3QS5B7V5;
 				INFOPLIST_FILE = BuildAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.BuildAR-shannon";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.BuildAR-jinwen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -564,13 +580,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S5RVQLHWL6;
+				DEVELOPMENT_TEAM = PZ3QS5B7V5;
 				INFOPLIST_FILE = BuildAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.BuildAR-shannon";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.BuildAR-jinwen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

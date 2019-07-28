@@ -42,7 +42,7 @@ class questionViewController: UIViewController {
         
         quizViewController = self
 
-        let dataRef = roofRef.child("\(questionBranch)")
+        let dataRef = roofRef.child("\(questionBranch)/question")
         dataRef.observe(.value) { (snap: DataSnapshot) in
             self.generateQuestion()
         }
@@ -70,7 +70,7 @@ class questionViewController: UIViewController {
         // Retrieve choice text
         guard let choiceButtonPressed = sender.currentTitle else {return}
         let choiceButton = "choice" + choiceButtonPressed
-        let choiceRef = roofRef.child("\(questionBranch)/qn\(questionID)/\(String(describing: choiceButton))")
+        let choiceRef = roofRef.child("\(questionBranch)/question/qn\(questionID)/\(String(describing: choiceButton))")
         choiceRef.observe(.value) { (snap: DataSnapshot) in
             let choice = snap.value as? String
             
@@ -94,6 +94,11 @@ class questionViewController: UIViewController {
         self.resultImage.image = nil
         
         generateQuestion()
+        self.resetLabelColor(label: self.labelA)
+        self.resetLabelColor(label: self.labelB)
+        self.resetLabelColor(label: self.labelC)
+        self.resetLabelColor(label: self.labelD)
+        
     }
     
     @IBAction func back(_ sender: UIButton) {
@@ -111,10 +116,10 @@ class questionViewController: UIViewController {
         self.generateImage(objectID: questionBranch)
         
         // Get new question number
-        let dataRef = roofRef.child("\(questionBranch)")
+        let dataRef = roofRef.child("\(questionBranch)/question")
         dataRef.observe(.value) { (snap: DataSnapshot) in
             
-            // Get the number of questions in the catagory
+            // Get the number of questions in the category
             numberOfQuestions = Int(snap.childrenCount)
             if numberOfQuestions > 0 {
                 questionID = Int.random(in: 1...numberOfQuestions)
@@ -139,7 +144,7 @@ class questionViewController: UIViewController {
     private func labelTextFromFirebase(key: String, label: UILabel) {
         
         // Retrieve text from Firebase
-        let referance = roofRef.child("\(questionBranch)/qn\(questionID)/\(key)")
+        let referance = roofRef.child("\(questionBranch)/question/qn\(questionID)/\(key)")
         referance.observe(.value) { (snap: DataSnapshot) in
             label.text = snap.value as? String
         }
@@ -148,7 +153,7 @@ class questionViewController: UIViewController {
     private func checkAnswer(choice: String) {
         
         // Retrieve answer
-        let answerRef = roofRef.child("\(questionBranch)/qn\(questionID)/answer")
+        let answerRef = roofRef.child("\(questionBranch)/question/qn\(questionID)/answer")
         answerRef.observe(.value) { (snap: DataSnapshot) in
             let answer = snap.value as? String
             
@@ -161,7 +166,25 @@ class questionViewController: UIViewController {
             } else {
                 print("Wrong answer")
                 self.resultImage.image = UIImage(named: "Wrong")
+                self.showAnswer(label: self.labelA, ans: answer!)
+                self.showAnswer(label: self.labelB, ans: answer!)
+                self.showAnswer(label: self.labelC, ans: answer!)
+                self.showAnswer(label: self.labelD, ans: answer!)
+                
             }
         }
+    }
+    
+    //highlight correct answer if user guess wrongly
+    func showAnswer(label: UILabel, ans: String)
+    {
+        if (label.text == ans) {
+            label.backgroundColor = UIColor.green
+        }
+    }
+    
+    func resetLabelColor(label: UILabel)
+    {
+        label.backgroundColor = UIColor.white
     }
 }

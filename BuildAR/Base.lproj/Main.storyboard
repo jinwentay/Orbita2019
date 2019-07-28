@@ -171,7 +171,7 @@
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmr-RD-bIy">
-                                <rect key="frame" x="846" y="20" width="30" height="30"/>
+                                <rect key="frame" x="846" y="10" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="Bcf-6T-6XQ"/>
                                     <constraint firstAttribute="height" constant="30" id="csu-GL-peZ"/>
@@ -197,6 +197,21 @@
                                     <action selector="stopSound:" destination="W1x-76-E25" eventType="touchUpInside" id="0CM-7j-WjH"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hva-vW-Miz">
+                                <rect key="frame" x="174" y="333" width="39" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="info"/>
+                                <connections>
+                                    <action selector="showObjectInfo:" destination="W1x-76-E25" eventType="touchUpInside" id="SRY-AA-Lpg"/>
+                                </connections>
+                            </button>
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPG-lQ-rt5">
+                                <rect key="frame" x="638" y="20" width="240" height="373"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="wRN-H5-L2a" kind="embed" id="2Kj-hk-XZS"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -209,7 +224,7 @@
                             <constraint firstItem="D91-vx-lEu" firstAttribute="top" secondItem="aTh-Cc-reo" secondAttribute="top" constant="20" id="JAF-H4-L3a"/>
                             <constraint firstAttribute="bottom" secondItem="C9q-mX-nJh" secondAttribute="bottom" id="VJw-7q-DcK"/>
                             <constraint firstItem="bI9-75-LNl" firstAttribute="centerY" secondItem="C9q-mX-nJh" secondAttribute="centerY" id="XDs-0X-E29"/>
-                            <constraint firstItem="zmr-RD-bIy" firstAttribute="top" secondItem="aTh-Cc-reo" secondAttribute="top" constant="20" id="XrA-c8-Ntm"/>
+                            <constraint firstItem="zmr-RD-bIy" firstAttribute="top" secondItem="aTh-Cc-reo" secondAttribute="top" constant="10" id="XrA-c8-Ntm"/>
                             <constraint firstItem="bI9-75-LNl" firstAttribute="centerX" secondItem="C9q-mX-nJh" secondAttribute="centerX" id="fsv-6Y-B0a"/>
                             <constraint firstAttribute="trailing" secondItem="bI9-75-LNl" secondAttribute="trailing" constant="20" id="jpg-r1-csa"/>
                             <constraint firstItem="OwZ-zl-hj4" firstAttribute="leading" secondItem="J0x-l7-BFX" secondAttribute="leading" id="o5F-ss-mty"/>
@@ -226,6 +241,8 @@
                         <outlet property="animalView" destination="nLV-JD-pg7" id="7YR-6g-NwJ"/>
                         <outlet property="buildButton" destination="D91-vx-lEu" id="Cgf-2H-MDX"/>
                         <outlet property="doneButton" destination="RnF-FU-vU0" id="Ee4-NO-eqo"/>
+                        <outlet property="infoButton" destination="hva-vW-Miz" id="fUk-CQ-6b0"/>
+                        <outlet property="infoContainerView" destination="mPG-lQ-rt5" id="zER-a7-25X"/>
                         <outlet property="itemView" destination="bI9-75-LNl" id="et4-wv-eRe"/>
                         <outlet property="playSoundButton" destination="Yae-lT-Bs2" id="4fz-1x-MFk"/>
                         <outlet property="quizContainerView" destination="C9q-mX-nJh" id="1A2-d4-g7A"/>
@@ -253,7 +270,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="kgZ-EU-MDk">
                                         <rect key="frame" x="0.0" y="0.0" width="209" height="90"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJ2-si-CF0" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJ2-si-CF0">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -265,7 +282,7 @@
                                                     <action selector="ship:" destination="HB1-HE-ycU" eventType="touchUpInside" id="r4e-Io-X9b"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXL-92-x5K" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXL-92-x5K">
                                                 <rect key="frame" x="119" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -282,7 +299,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="byE-k6-LAE">
                                         <rect key="frame" x="0.0" y="121" width="209" height="90"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEl-00-KVg" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEl-00-KVg">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -294,7 +311,7 @@
                                                     <action selector="taxi:" destination="HB1-HE-ycU" eventType="touchUpInside" id="c74-U2-Geg"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXY-ap-uDF" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXY-ap-uDF">
                                                 <rect key="frame" x="119" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -429,7 +446,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="oRa-qn-i7S">
                                         <rect key="frame" x="0.0" y="0.0" width="206" height="90"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKG-hx-1Lc" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKG-hx-1Lc">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -441,7 +458,7 @@
                                                     <action selector="dog:" destination="AFH-0J-EJz" eventType="touchUpInside" id="xgK-9U-Cbv"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPk-jr-Q8D" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPk-jr-Q8D">
                                                 <rect key="frame" x="116" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -458,7 +475,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="e32-gd-HIw">
                                         <rect key="frame" x="0.0" y="122" width="206" height="90"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkL-ke-huk" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkL-ke-huk">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -470,7 +487,7 @@
                                                     <action selector="zebra:" destination="AFH-0J-EJz" eventType="touchUpInside" id="Nl6-Dr-Wfk"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eph-at-K33" customClass="createWorldCustom" customModule="BuildAR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eph-at-K33">
                                                 <rect key="frame" x="116" y="0.0" width="90" height="90"/>
                                                 <color key="backgroundColor" red="0.091852582990000001" green="0.35011675949999999" blue="0.48132205010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -943,35 +960,58 @@
                                     <action selector="back:" destination="0oo-U1-Uit" eventType="touchUpInside" id="gTk-wp-Ubh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgn-cd-ouI">
-                                <rect key="frame" x="714" y="20" width="118" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Change to Scene">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="switchToScene:" destination="0oo-U1-Uit" eventType="touchUpInside" id="gnh-Eb-BzA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlx-3S-6bt">
-                                <rect key="frame" x="737" y="20" width="95" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlx-3S-6bt" customClass="settingButtons" customModule="BuildAR" customModuleProvider="target">
+                                <rect key="frame" x="389" y="99" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Change to AR">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="switchToAR:" destination="0oo-U1-Uit" eventType="touchUpInside" id="Qxy-d5-isn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="le2-ff-L9K">
+                                <rect key="frame" x="367" y="19" width="163" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6t-uM-ZDk">
+                                <rect key="frame" x="411" y="70" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgn-cd-ouI" customClass="settingButtons" customModule="BuildAR" customModuleProvider="target">
+                                <rect key="frame" x="378" y="99" width="141" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Change to Scene">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchToScene:" destination="0oo-U1-Uit" eventType="touchUpInside" id="gnh-Eb-BzA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tutorial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afo-C6-iMb">
+                                <rect key="frame" x="378" y="194" width="81" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzO-Xd-2F1">
+                                <rect key="frame" x="467" y="189" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.18835544586181641" green="0.19191846251487732" blue="0.20392337441444397" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="OOk-qT-ewH" firstAttribute="trailing" secondItem="jlx-3S-6bt" secondAttribute="trailing" constant="20" id="0dP-cX-GOu"/>
                             <constraint firstItem="sWO-vm-TfF" firstAttribute="top" secondItem="OOk-qT-ewH" secondAttribute="top" constant="20" id="25o-9D-ZGn"/>
-                            <constraint firstItem="jlx-3S-6bt" firstAttribute="top" secondItem="OOk-qT-ewH" secondAttribute="top" constant="20" id="2DO-on-Bhc"/>
-                            <constraint firstItem="Lgn-cd-ouI" firstAttribute="top" secondItem="OOk-qT-ewH" secondAttribute="top" constant="20" id="9Cp-C0-ePT"/>
                             <constraint firstItem="sWO-vm-TfF" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="ezP-8j-L4y"/>
-                            <constraint firstItem="OOk-qT-ewH" firstAttribute="trailing" secondItem="Lgn-cd-ouI" secondAttribute="trailing" constant="20" id="zPv-GL-szc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OOk-qT-ewH"/>
                     </view>
@@ -984,7 +1024,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHe-T1-VJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="678" y="-830"/>
+            <point key="canvasLocation" x="677.67857142857144" y="-830.43478260869574"/>
         </scene>
         <!--Animal View Controller-->
         <scene sceneID="Qpw-WO-fg0">
@@ -1073,6 +1113,45 @@
             </objects>
             <point key="canvasLocation" x="466" y="1068"/>
         </scene>
+        <!--DYK View Controller-->
+        <scene sceneID="z20-Pb-hrl">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HGA-2G-q00" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="wRN-H5-L2a" userLabel="DYK View Controller" customClass="DYKViewController" customModule="BuildAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CLx-Iy-Te9" customClass="customCardView" customModule="BuildAR" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="373"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pjv-aK-TV3">
+                                <rect key="frame" x="16" y="72" width="208" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmi-BH-cyL" customClass="customLabel" customModule="BuildAR" customModuleProvider="target">
+                                <rect key="frame" x="16" y="195" width="208" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DID YOU KNOW?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlm-NN-Z7K">
+                                <rect key="frame" x="54" y="27" width="132" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="DYKtitle" destination="Qlm-NN-Z7K" id="KAk-Dy-Fqb"/>
+                        <outlet property="fact" destination="vmi-BH-cyL" id="Ah1-aK-dr5"/>
+                        <outlet property="objectImage" destination="pjv-aK-TV3" id="nTn-L7-LIE"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="264.50892857142856" y="984.78260869565224"/>
+        </scene>
     </scenes>
     <resources>
         <image name="A" width="250" height="210"/>
@@ -1095,6 +1174,7 @@
         <image name="build" width="256" height="256"/>
         <image name="cat" width="288" height="216"/>
         <image name="helicopter" width="288" height="216"/>
+        <image name="info" width="50" height="50"/>
         <image name="lion" width="288" height="216"/>
         <image name="play" width="256" height="256"/>
         <image name="quiz" width="256" height="256"/>
@@ -1105,7 +1185,7 @@
         <image name="zebra" width="288" height="216"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ghR-hu-MKK"/>
+        <segue reference="2Lo-uc-I32"/>
         <segue reference="QrQ-Mi-Tyc"/>
         <segue reference="2QE-LB-aXt"/>
     </inferredMetricsTieBreakers>
