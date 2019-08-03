@@ -14,9 +14,11 @@ import Firebase
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet weak var startButton: createWorldCustom!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startButton.pulsate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
