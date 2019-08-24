@@ -234,7 +234,6 @@
                     <connections>
                         <outlet property="animalView" destination="nLV-JD-pg7" id="7YR-6g-NwJ"/>
                         <outlet property="buildButton" destination="D91-vx-lEu" id="Cgf-2H-MDX"/>
-                        <outlet property="doneButton" destination="RnF-FU-vU0" id="Ee4-NO-eqo"/>
                         <outlet property="infoButton" destination="hva-vW-Miz" id="fUk-CQ-6b0"/>
                         <outlet property="infoContainerView" destination="mPG-lQ-rt5" id="zER-a7-25X"/>
                         <outlet property="itemView" destination="bI9-75-LNl" id="et4-wv-eRe"/>
@@ -243,6 +242,7 @@
                         <outlet property="quizContainerView" destination="C9q-mX-nJh" id="1A2-d4-g7A"/>
                         <outlet property="resetButton" destination="oYH-td-EEJ" id="JiV-8H-7UN"/>
                         <outlet property="sceneView" destination="OwZ-zl-hj4" id="Q5c-Jq-7KF"/>
+                        <outlet property="settingButton" destination="zmr-RD-bIy" id="5Iw-n7-oor"/>
                         <outlet property="stopSoundButton" destination="Flq-zr-x18" id="mhc-EY-dwi"/>
                         <outlet property="vehicleView" destination="T43-he-rYi" id="Zio-E1-qkc"/>
                     </connections>
@@ -696,7 +696,6 @@
                                         </constraints>
                                         <state key="normal" title="Next" image="NextButton"/>
                                         <connections>
-                                            <action selector="next:" destination="W1x-76-E25" eventType="touchUpInside" id="xao-PV-4kd"/>
                                             <action selector="next:" destination="VPU-ID-iiy" eventType="touchUpInside" id="ytN-0K-ubq"/>
                                         </connections>
                                     </button>
@@ -1011,12 +1010,16 @@
                                 <color key="textColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgn-cd-ouI" customClass="settingButtons" customModule="BuildAR" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgn-cd-ouI" customClass="settingButtons" customModule="BuildAR" customModuleProvider="target">
                                 <rect key="frame" x="378" y="99" width="141" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Change to Scene">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="switchToAR:" destination="0oo-U1-Uit" eventType="touchUpInside" id="ZAL-NO-TLv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlx-3S-6bt" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
                                 <rect key="frame" x="64" y="100" width="160" height="30"/>
@@ -1072,14 +1075,11 @@
                             <constraint firstItem="05G-nu-2H3" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="Jbl-1o-wBB"/>
                             <constraint firstItem="05G-nu-2H3" firstAttribute="top" secondItem="OOk-qT-ewH" secondAttribute="top" constant="180" id="NQ8-UJ-Ubs"/>
                             <constraint firstItem="OOk-qT-ewH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oNf-Ur-TtV" secondAttribute="trailing" symbolic="YES" id="R3q-QO-Vp0"/>
-                            <constraint firstItem="OOk-qT-ewH" firstAttribute="leading" secondItem="Lgn-cd-ouI" secondAttribute="trailing" constant="-180" id="SoS-I3-weD"/>
-                            <constraint firstItem="Lgn-cd-ouI" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="V0r-84-eCb"/>
                             <constraint firstItem="jlx-3S-6bt" firstAttribute="top" secondItem="sWO-vm-TfF" secondAttribute="bottom" constant="50" id="ZHZ-LU-ZAy"/>
                             <constraint firstItem="oNf-Ur-TtV" firstAttribute="top" secondItem="05G-nu-2H3" secondAttribute="bottom" constant="10" id="ebk-VW-haE"/>
                             <constraint firstItem="sWO-vm-TfF" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="ezP-8j-L4y"/>
                             <constraint firstItem="OOk-qT-ewH" firstAttribute="leading" secondItem="sWO-vm-TfF" secondAttribute="trailing" constant="-60" id="ijt-am-KdY"/>
                             <constraint firstItem="oNf-Ur-TtV" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="60" id="piU-3D-4eU"/>
-                            <constraint firstItem="Lgn-cd-ouI" firstAttribute="top" secondItem="sWO-vm-TfF" secondAttribute="bottom" constant="50" id="qZa-7C-Swm"/>
                             <constraint firstItem="OOk-qT-ewH" firstAttribute="top" secondItem="05G-nu-2H3" secondAttribute="bottom" constant="-220" id="rG3-a0-P11"/>
                             <constraint firstItem="OOk-qT-ewH" firstAttribute="leading" secondItem="05G-nu-2H3" secondAttribute="trailing" constant="-280" id="tFz-Lv-7oI"/>
                             <constraint firstItem="OOk-qT-ewH" firstAttribute="leading" secondItem="jlx-3S-6bt" secondAttribute="trailing" constant="-180" id="wVk-nc-anv"/>
@@ -1367,7 +1367,6 @@
                                         </constraints>
                                         <state key="normal" title="Next" image="NextButton"/>
                                         <connections>
-                                            <action selector="next:" destination="W1x-76-E25" eventType="touchUpInside" id="4bx-8C-Z0h"/>
                                             <action selector="next:" destination="EXh-tP-G3l" eventType="touchUpInside" id="kzg-Qp-VZl"/>
                                         </connections>
                                     </button>
@@ -1480,7 +1479,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2Lo-uc-I32"/>
-        <segue reference="S1C-JZ-4wm"/>
-        <segue reference="F4l-lS-cFg"/>
+        <segue reference="QrQ-Mi-Tyc"/>
+        <segue reference="2QE-LB-aXt"/>
     </inferredMetricsTieBreakers>
 </document>
