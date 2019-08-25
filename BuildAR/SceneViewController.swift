@@ -47,6 +47,14 @@ class SceneViewController: UIViewController, SCNSceneRendererDelegate {
                         "train": SCNVector3(Double.pi / 2, Double.pi * 1.5, 0),
                         "taxi": SCNVector3(Double.pi / 2, Double.pi * 1.5, 0)]
     
+    let alertMessage = ["Select an object, then tap the circle button to place it!",
+                        "Tap the question mark to play the quiz",
+                            "You can turn off tutorial in settings"]
+    let alertTitle = ["Welcome",
+                      "Quiz mode",
+                        "Tutorial mode"]
+    let numberOfMessages = 2
+    
     
     override func viewDidLoad() {
         setupScene()
@@ -57,6 +65,27 @@ class SceneViewController: UIViewController, SCNSceneRendererDelegate {
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         sceneView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if tutorialMode {
+            createAlert(titleNumber: 0, number: 0)
+        }
+    }
+    
+    func createAlert(titleNumber: Int, number: Int) {
+        let alert = UIAlertController(title: alertTitle[titleNumber], message: alertMessage[number], preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Exit tutorial", style: UIAlertAction.Style.default, handler: {
+            (action) in
+            alert.dismiss(animated:true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Next tip", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            if number < self.numberOfMessages {
+                self.createAlert(titleNumber: titleNumber + 1, number: number + 1)
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func setupScene(){
@@ -247,6 +276,7 @@ class SceneViewController: UIViewController, SCNSceneRendererDelegate {
                 node.removeFromParentNode()
             }
         }
+        print("resetting")
     }
     
     @IBAction func forward(_ sender: UIButton) {

@@ -12,23 +12,20 @@ import Firebase
 
 var inARMode = true
 var questionLevel = "standard"
+var tutorialMode = true
 
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var modeSegment: UISegmentedControl!
     @IBOutlet weak var levelSegment: UISegmentedControl!
-    @IBOutlet weak var changeToSceneButton: UIButton!
-    @IBOutlet weak var changeToARButton: UIButton!
+    @IBOutlet weak var tutorialSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        changeToARButton.isHidden = inARMode
-        changeToSceneButton.isHidden = !inARMode
         
         if inARMode {
             mainViewController.reset(mainViewController.resetButton)
         }
-        
         setupSegments()
     }
     
@@ -45,6 +42,11 @@ class SettingsViewController: UIViewController {
             print("Virtual mode")
             modeSegment.selectedSegmentIndex = 1
         }
+        if tutorialMode {
+            tutorialSwitch.isOn = true
+        } else {
+            tutorialSwitch.isOn = false
+        }
     }
     
     // MARK: Actions
@@ -55,31 +57,13 @@ class SettingsViewController: UIViewController {
             performSegue(withIdentifier: "backToScene", sender: self)
         }
     }
-//    @IBAction func switchToScene(_ sender: UIButton) {
-//        inARMode = false
-//        changeToSceneButton.isHidden = true
-//        changeToARButton.isHidden = false
-//        performSegue(withIdentifier: "backToScene", sender: self)
-//    }
-//    @IBAction func switchToAR(_ sender: UIButton) {
-//        inARMode = true
-//        changeToSceneButton.isHidden = false
-//        changeToARButton.isHidden = true
-//        performSegue(withIdentifier: "backToAR", sender: self)
-//    }
     @IBAction func switchMode(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             inARMode = true
-            changeToSceneButton.isHidden = false
-            changeToARButton.isHidden = true
-//            performSegue(withIdentifier: "backToAR", sender: self)
-            print("AR")
+            performSegue(withIdentifier: "backToAR", sender: self)
         } else {
             inARMode = false
-            changeToSceneButton.isHidden = true
-            changeToARButton.isHidden = false
             performSegue(withIdentifier: "backToScene", sender: self)
-            print("virtual")
         }
     }
     @IBAction func switchLevel(_ sender: UISegmentedControl) {
@@ -87,6 +71,13 @@ class SettingsViewController: UIViewController {
             questionLevel = "standard"
         } else {
             questionLevel = "advanced"
+        }
+    }
+    @IBAction func switchTutorial(_ sender: UISwitch) {
+        if sender.isOn {
+            tutorialMode = true
+        } else {
+            tutorialMode = false
         }
     }
 }

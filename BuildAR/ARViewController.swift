@@ -58,6 +58,14 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     var selectedNode: SCNNode!
     var audioplayer = AVAudioPlayer()
     
+    let alertMessage = ["Select an object, then tap the circle button to place it!",
+                        "Tap the question mark to play the quiz",
+                        "You can turn off tutorial in settings"]
+    let alertTitle = ["Welcome",
+                      "Quiz mode",
+                      "Tutorial mode"]
+    let numberOfMessages = 2
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -78,7 +86,24 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //createAlert(title: "Welcome", message: "Select an object, then tap on one of the yellow dots on the screen to place it!")
+        if tutorialMode {
+            createAlert(titleNumber: 0, number: 0)
+        }
+    }
+    
+    func createAlert(titleNumber: Int, number: Int) {
+        let alert = UIAlertController(title: alertTitle[titleNumber], message: alertMessage[number], preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Exit tutorial", style: UIAlertAction.Style.default, handler: {
+            (action) in
+            alert.dismiss(animated:true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Next tip", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            if number < self.numberOfMessages {
+                self.createAlert(titleNumber: titleNumber + 1, number: number + 1)
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     @objc func handleTap(sender: UITapGestureRecognizer){
@@ -110,10 +135,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             
             // In Buiding mode
             if inBuidingMode{
-                if objectScene == "art.scnassets/helicopter/helicopter.scn" {
-//                    hitVector.x -= 0.93
-                    print("helicopter")
-                }
                 createObject(position: hitVector)
             }
                 // In Quiz mode
@@ -256,15 +277,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     func hideQuizView () {
         self.quizContainerView.isHidden = true
         selectedNode.removeAllActions()
-    }
-    
-    func createAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: {
-            (action) in
-            alert.dismiss(animated:true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
     }
     
 }

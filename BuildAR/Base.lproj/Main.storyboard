@@ -1003,50 +1003,14 @@
                                     <action selector="back:" destination="0oo-U1-Uit" eventType="touchUpInside" id="gTk-wp-Ubh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6t-uM-ZDk">
-                                <rect key="frame" x="411" y="70" width="74" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgn-cd-ouI" customClass="settingButtons" customModule="BuildAR" customModuleProvider="target">
-                                <rect key="frame" x="378" y="99" width="141" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Change to Scene">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="switchToAR:" destination="0oo-U1-Uit" eventType="touchUpInside" id="ZAL-NO-TLv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlx-3S-6bt" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
-                                <rect key="frame" x="64" y="100" width="160" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Change to AR">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="switchToScene:" destination="0oo-U1-Uit" eventType="touchUpInside" id="gnh-Eb-BzA"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tutorial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afo-C6-iMb">
-                                <rect key="frame" x="378" y="194" width="81" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutorial" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afo-C6-iMb">
+                                <rect key="frame" x="64" y="260" width="57" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzO-Xd-2F1">
-                                <rect key="frame" x="467" y="189" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oNf-Ur-TtV">
-                                <rect key="frame" x="104" y="230" width="347" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="vZG-2f-GwL"/>
-                                </constraints>
+                                <rect key="frame" x="104" y="212" width="347" height="29"/>
                                 <segments>
                                     <segment title="Standard (lower primary)"/>
                                     <segment title="Advanced (upper primary)"/>
@@ -1055,8 +1019,8 @@
                                     <action selector="switchLevel:" destination="0oo-U1-Uit" eventType="valueChanged" id="34c-Q2-Z7M"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select quiz difficulty level:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05G-nu-2H3">
-                                <rect key="frame" x="64" y="180" width="260" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select quiz difficulty level:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05G-nu-2H3">
+                                <rect key="frame" x="64" y="170" width="210.5" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1067,8 +1031,8 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="bBS-TD-m8n">
-                                <rect key="frame" x="104" y="132" width="347" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bBS-TD-m8n">
+                                <rect key="frame" x="104" y="122" width="347" height="29"/>
                                 <segments>
                                     <segment title="AR Mode"/>
                                     <segment title="Virtual Mode"/>
@@ -1077,37 +1041,50 @@
                                     <action selector="switchMode:" destination="0oo-U1-Uit" eventType="valueChanged" id="7HR-mR-1L0"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Mode:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6t-uM-ZDk">
-                                <rect key="frame" x="64" y="81" width="96" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Mode:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6t-uM-ZDk">
+                                <rect key="frame" x="64" y="80" width="83" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzO-Xd-2F1">
+                                <rect key="frame" x="104" y="300.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchTutorial:" destination="0oo-U1-Uit" eventType="valueChanged" id="Ll4-95-lLL"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.18835544586181641" green="0.19191846251487732" blue="0.20392337441444397" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="qzO-Xd-2F1" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="60" id="1Rw-uv-rLu"/>
+                            <constraint firstItem="M6t-uM-ZDk" firstAttribute="top" secondItem="sWO-vm-TfF" secondAttribute="bottom" constant="30" id="1yX-k4-7KQ"/>
                             <constraint firstItem="sWO-vm-TfF" firstAttribute="top" secondItem="OOk-qT-ewH" secondAttribute="top" constant="20" id="25o-9D-ZGn"/>
+                            <constraint firstItem="Afo-C6-iMb" firstAttribute="top" secondItem="oNf-Ur-TtV" secondAttribute="bottom" constant="20" id="55b-wY-ePA"/>
+                            <constraint firstItem="OOk-qT-ewH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="M6t-uM-ZDk" secondAttribute="trailing" symbolic="YES" id="5bq-oW-veb"/>
                             <constraint firstItem="bBS-TD-m8n" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="60" id="6hX-O1-XkH"/>
                             <constraint firstItem="05G-nu-2H3" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="Jbl-1o-wBB"/>
-                            <constraint firstItem="05G-nu-2H3" firstAttribute="top" secondItem="OOk-qT-ewH" secondAttribute="top" constant="180" id="NQ8-UJ-Ubs"/>
-                            <constraint firstItem="05G-nu-2H3" firstAttribute="top" secondItem="bBS-TD-m8n" secondAttribute="bottom" constant="20" id="QwJ-DS-aQr"/>
                             <constraint firstItem="OOk-qT-ewH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oNf-Ur-TtV" secondAttribute="trailing" symbolic="YES" id="R3q-QO-Vp0"/>
+                            <constraint firstItem="OOk-qT-ewH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="05G-nu-2H3" secondAttribute="trailing" symbolic="YES" id="TUo-gc-OEu"/>
                             <constraint firstItem="oNf-Ur-TtV" firstAttribute="trailing" secondItem="bBS-TD-m8n" secondAttribute="trailing" id="YRH-bg-mu0"/>
+                            <constraint firstItem="05G-nu-2H3" firstAttribute="top" secondItem="bBS-TD-m8n" secondAttribute="bottom" constant="20" id="ZdY-zC-8SP"/>
                             <constraint firstItem="le2-ff-L9K" firstAttribute="centerX" secondItem="rtV-xh-iHK" secondAttribute="centerX" id="eRX-u2-s2f"/>
-                            <constraint firstItem="oNf-Ur-TtV" firstAttribute="top" secondItem="05G-nu-2H3" secondAttribute="bottom" constant="10" id="ebk-VW-haE"/>
                             <constraint firstItem="sWO-vm-TfF" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="ezP-8j-L4y"/>
                             <constraint firstItem="le2-ff-L9K" firstAttribute="top" secondItem="OOk-qT-ewH" secondAttribute="top" constant="20" id="fz6-Ml-ksm"/>
+                            <constraint firstItem="M6t-uM-ZDk" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="gUX-eV-w7o"/>
                             <constraint firstItem="OOk-qT-ewH" firstAttribute="leading" secondItem="sWO-vm-TfF" secondAttribute="trailing" constant="-60" id="ijt-am-KdY"/>
+                            <constraint firstItem="OOk-qT-ewH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Afo-C6-iMb" secondAttribute="trailing" symbolic="YES" id="nsZ-LR-uVL"/>
                             <constraint firstItem="oNf-Ur-TtV" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="60" id="piU-3D-4eU"/>
-                            <constraint firstItem="OOk-qT-ewH" firstAttribute="top" secondItem="05G-nu-2H3" secondAttribute="bottom" constant="-220" id="rG3-a0-P11"/>
-                            <constraint firstItem="OOk-qT-ewH" firstAttribute="leading" secondItem="05G-nu-2H3" secondAttribute="trailing" constant="-280" id="tFz-Lv-7oI"/>
+                            <constraint firstItem="qzO-Xd-2F1" firstAttribute="top" secondItem="Afo-C6-iMb" secondAttribute="bottom" constant="20" id="say-Az-U2X"/>
+                            <constraint firstItem="oNf-Ur-TtV" firstAttribute="top" secondItem="05G-nu-2H3" secondAttribute="bottom" constant="20" id="st4-Up-17g"/>
+                            <constraint firstItem="bBS-TD-m8n" firstAttribute="top" secondItem="M6t-uM-ZDk" secondAttribute="bottom" constant="20" id="vD9-Hy-54b"/>
+                            <constraint firstItem="Afo-C6-iMb" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="vor-XS-eHU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OOk-qT-ewH"/>
                     </view>
                     <connections>
                         <outlet property="levelSegment" destination="oNf-Ur-TtV" id="Oud-V7-HmQ"/>
                         <outlet property="modeSegment" destination="bBS-TD-m8n" id="j4U-9h-a37"/>
+                        <outlet property="tutorialSwitch" destination="qzO-Xd-2F1" id="2I9-S0-0ZV"/>
                         <segue destination="28G-Bc-cOc" kind="show" identifier="backToScene" id="QrQ-Mi-Tyc"/>
                         <segue destination="W1x-76-E25" kind="show" identifier="backToAR" id="2QE-LB-aXt"/>
                     </connections>
@@ -1496,7 +1473,7 @@
         <image name="zebra" width="288" height="216"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2Lo-uc-I32"/>
+        <segue reference="ghR-hu-MKK"/>
         <segue reference="QrQ-Mi-Tyc"/>
         <segue reference="2QE-LB-aXt"/>
     </inferredMetricsTieBreakers>
