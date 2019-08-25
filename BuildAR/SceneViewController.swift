@@ -167,7 +167,7 @@ class SceneViewController: UIViewController, SCNSceneRendererDelegate {
             node.eulerAngles.x = 0
         }
         node.position.y = 0
-        print(node.name ?? "no node")
+//        print(node.name ?? "no node")
     }
     
     func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {

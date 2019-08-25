@@ -1004,30 +1004,6 @@
                                     <action selector="back:" destination="0oo-U1-Uit" eventType="touchUpInside" id="gTk-wp-Ubh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6t-uM-ZDk">
-                                <rect key="frame" x="411" y="70" width="74" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgn-cd-ouI" customClass="settingButtons" customModule="BuildAR" customModuleProvider="target">
-                                <rect key="frame" x="378" y="99" width="141" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Change to Scene">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlx-3S-6bt" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
-                                <rect key="frame" x="64" y="100" width="160" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Change to AR">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="switchToScene:" destination="0oo-U1-Uit" eventType="touchUpInside" id="gnh-Eb-BzA"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tutorial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afo-C6-iMb">
                                 <rect key="frame" x="378" y="194" width="81" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1052,16 +1028,32 @@
                                     <action selector="switchLevel:" destination="0oo-U1-Uit" eventType="valueChanged" id="34c-Q2-Z7M"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select quiz difficulty level:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05G-nu-2H3">
-                                <rect key="frame" x="64" y="180" width="260" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select quiz difficulty level:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05G-nu-2H3">
+                                <rect key="frame" x="64" y="180" width="260" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="le2-ff-L9K">
-                                <rect key="frame" x="366" y="20" width="164" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="le2-ff-L9K">
+                                <rect key="frame" x="367" y="20" width="162.5" height="32"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="bBS-TD-m8n">
+                                <rect key="frame" x="104" y="132" width="347" height="29"/>
+                                <segments>
+                                    <segment title="AR Mode"/>
+                                    <segment title="Virtual Mode"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchMode:" destination="0oo-U1-Uit" eventType="valueChanged" id="7HR-mR-1L0"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Mode:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6t-uM-ZDk">
+                                <rect key="frame" x="64" y="81" width="96" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1069,27 +1061,26 @@
                         <color key="backgroundColor" red="0.18835544586181641" green="0.19191846251487732" blue="0.20392337441444397" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="sWO-vm-TfF" firstAttribute="top" secondItem="OOk-qT-ewH" secondAttribute="top" constant="20" id="25o-9D-ZGn"/>
+                            <constraint firstItem="bBS-TD-m8n" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="60" id="6hX-O1-XkH"/>
                             <constraint firstItem="05G-nu-2H3" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="Jbl-1o-wBB"/>
                             <constraint firstItem="05G-nu-2H3" firstAttribute="top" secondItem="OOk-qT-ewH" secondAttribute="top" constant="180" id="NQ8-UJ-Ubs"/>
+                            <constraint firstItem="05G-nu-2H3" firstAttribute="top" secondItem="bBS-TD-m8n" secondAttribute="bottom" constant="20" id="QwJ-DS-aQr"/>
                             <constraint firstItem="OOk-qT-ewH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oNf-Ur-TtV" secondAttribute="trailing" symbolic="YES" id="R3q-QO-Vp0"/>
-                            <constraint firstItem="OOk-qT-ewH" firstAttribute="leading" secondItem="Lgn-cd-ouI" secondAttribute="trailing" constant="-180" id="SoS-I3-weD"/>
-                            <constraint firstItem="Lgn-cd-ouI" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="V0r-84-eCb"/>
-                            <constraint firstItem="jlx-3S-6bt" firstAttribute="top" secondItem="sWO-vm-TfF" secondAttribute="bottom" constant="50" id="ZHZ-LU-ZAy"/>
+                            <constraint firstItem="oNf-Ur-TtV" firstAttribute="trailing" secondItem="bBS-TD-m8n" secondAttribute="trailing" id="YRH-bg-mu0"/>
+                            <constraint firstItem="le2-ff-L9K" firstAttribute="centerX" secondItem="rtV-xh-iHK" secondAttribute="centerX" id="eRX-u2-s2f"/>
                             <constraint firstItem="oNf-Ur-TtV" firstAttribute="top" secondItem="05G-nu-2H3" secondAttribute="bottom" constant="10" id="ebk-VW-haE"/>
                             <constraint firstItem="sWO-vm-TfF" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="ezP-8j-L4y"/>
+                            <constraint firstItem="le2-ff-L9K" firstAttribute="top" secondItem="OOk-qT-ewH" secondAttribute="top" constant="20" id="fz6-Ml-ksm"/>
                             <constraint firstItem="OOk-qT-ewH" firstAttribute="leading" secondItem="sWO-vm-TfF" secondAttribute="trailing" constant="-60" id="ijt-am-KdY"/>
                             <constraint firstItem="oNf-Ur-TtV" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="60" id="piU-3D-4eU"/>
-                            <constraint firstItem="Lgn-cd-ouI" firstAttribute="top" secondItem="sWO-vm-TfF" secondAttribute="bottom" constant="50" id="qZa-7C-Swm"/>
                             <constraint firstItem="OOk-qT-ewH" firstAttribute="top" secondItem="05G-nu-2H3" secondAttribute="bottom" constant="-220" id="rG3-a0-P11"/>
                             <constraint firstItem="OOk-qT-ewH" firstAttribute="leading" secondItem="05G-nu-2H3" secondAttribute="trailing" constant="-280" id="tFz-Lv-7oI"/>
-                            <constraint firstItem="OOk-qT-ewH" firstAttribute="leading" secondItem="jlx-3S-6bt" secondAttribute="trailing" constant="-180" id="wVk-nc-anv"/>
-                            <constraint firstItem="jlx-3S-6bt" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="x4J-72-erO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OOk-qT-ewH"/>
                     </view>
                     <connections>
-                        <outlet property="changeToARButton" destination="jlx-3S-6bt" id="tNn-oy-dhJ"/>
-                        <outlet property="changeToSceneButton" destination="Lgn-cd-ouI" id="y5M-rb-l67"/>
+                        <outlet property="levelSegment" destination="oNf-Ur-TtV" id="Oud-V7-HmQ"/>
+                        <outlet property="modeSegment" destination="bBS-TD-m8n" id="j4U-9h-a37"/>
                         <segue destination="28G-Bc-cOc" kind="show" identifier="backToScene" id="QrQ-Mi-Tyc"/>
                         <segue destination="W1x-76-E25" kind="show" identifier="backToAR" id="2QE-LB-aXt"/>
                     </connections>
@@ -1480,7 +1471,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2Lo-uc-I32"/>
-        <segue reference="S1C-JZ-4wm"/>
-        <segue reference="F4l-lS-cFg"/>
+        <segue reference="QrQ-Mi-Tyc"/>
+        <segue reference="2QE-LB-aXt"/>
     </inferredMetricsTieBreakers>
 </document>
