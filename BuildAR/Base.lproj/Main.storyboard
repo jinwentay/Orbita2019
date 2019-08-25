@@ -234,7 +234,6 @@
                     <connections>
                         <outlet property="animalView" destination="nLV-JD-pg7" id="7YR-6g-NwJ"/>
                         <outlet property="buildButton" destination="D91-vx-lEu" id="Cgf-2H-MDX"/>
-                        <outlet property="doneButton" destination="RnF-FU-vU0" id="Ee4-NO-eqo"/>
                         <outlet property="infoButton" destination="hva-vW-Miz" id="fUk-CQ-6b0"/>
                         <outlet property="infoContainerView" destination="mPG-lQ-rt5" id="zER-a7-25X"/>
                         <outlet property="itemView" destination="bI9-75-LNl" id="et4-wv-eRe"/>
@@ -243,6 +242,7 @@
                         <outlet property="quizContainerView" destination="C9q-mX-nJh" id="1A2-d4-g7A"/>
                         <outlet property="resetButton" destination="oYH-td-EEJ" id="JiV-8H-7UN"/>
                         <outlet property="sceneView" destination="OwZ-zl-hj4" id="Q5c-Jq-7KF"/>
+                        <outlet property="settingButton" destination="zmr-RD-bIy" id="5Iw-n7-oor"/>
                         <outlet property="stopSoundButton" destination="Flq-zr-x18" id="mhc-EY-dwi"/>
                         <outlet property="vehicleView" destination="T43-he-rYi" id="Zio-E1-qkc"/>
                     </connections>
@@ -696,7 +696,6 @@
                                         </constraints>
                                         <state key="normal" title="Next" image="NextButton"/>
                                         <connections>
-                                            <action selector="next:" destination="W1x-76-E25" eventType="touchUpInside" id="xao-PV-4kd"/>
                                             <action selector="next:" destination="VPU-ID-iiy" eventType="touchUpInside" id="ytN-0K-ubq"/>
                                         </connections>
                                     </button>
@@ -1002,6 +1001,34 @@
                                 <state key="normal" title="Button" image="Back"/>
                                 <connections>
                                     <action selector="back:" destination="0oo-U1-Uit" eventType="touchUpInside" id="gTk-wp-Ubh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6t-uM-ZDk">
+                                <rect key="frame" x="411" y="70" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgn-cd-ouI" customClass="settingButtons" customModule="BuildAR" customModuleProvider="target">
+                                <rect key="frame" x="378" y="99" width="141" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Change to Scene">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchToAR:" destination="0oo-U1-Uit" eventType="touchUpInside" id="ZAL-NO-TLv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlx-3S-6bt" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
+                                <rect key="frame" x="64" y="100" width="160" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Change to AR">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchToScene:" destination="0oo-U1-Uit" eventType="touchUpInside" id="gnh-Eb-BzA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tutorial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afo-C6-iMb">
@@ -1358,7 +1385,6 @@
                                         </constraints>
                                         <state key="normal" title="Next" image="NextButton"/>
                                         <connections>
-                                            <action selector="next:" destination="W1x-76-E25" eventType="touchUpInside" id="4bx-8C-Z0h"/>
                                             <action selector="next:" destination="EXh-tP-G3l" eventType="touchUpInside" id="kzg-Qp-VZl"/>
                                         </connections>
                                     </button>

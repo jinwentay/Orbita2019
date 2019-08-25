@@ -44,6 +44,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var playSoundButton: UIButton!
     @IBOutlet weak var stopSoundButton: UIButton!
     @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var settingButton: UIButton!
     
     @IBOutlet var sceneView: ARSCNView!
     
@@ -216,6 +217,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             infoContainerView.isHidden = true
             quizContainerView.isHidden = false
         }
+        infoContainerView.bringSubviewToFront(settingButton)
     }
     
     @IBAction func reset(_ sender: UIButton) {
