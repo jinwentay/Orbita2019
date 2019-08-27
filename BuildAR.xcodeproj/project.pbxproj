@@ -25,6 +25,7 @@
 		B1631BBE22EDF47C000BE73D /* settingButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631BBD22EDF47C000BE73D /* settingButtons.swift */; };
 		B1631BC022EDF867000BE73D /* customLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631BBF22EDF867000BE73D /* customLabel.swift */; };
 		B1631BC222EDFE4F000BE73D /* customCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631BC122EDFE4F000BE73D /* customCardView.swift */; };
+		B1BDD4F723155A880038FE01 /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BDD4F623155A880038FE01 /* EdgeInsetLabel.swift */; };
 		C592B26222C50A9E0075FB2D /* animalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26122C50A9D0075FB2D /* animalViewController.swift */; };
 		C592B26422C50AE50075FB2D /* vehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26322C50AE50075FB2D /* vehiclesViewController.swift */; };
 		C592B26622C75D910075FB2D /* questionCustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592B26522C75D910075FB2D /* questionCustomLabel.swift */; };
@@ -70,6 +71,7 @@
 		B1631BBD22EDF47C000BE73D /* settingButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingButtons.swift; sourceTree = "<group>"; };
 		B1631BBF22EDF867000BE73D /* customLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customLabel.swift; sourceTree = "<group>"; };
 		B1631BC122EDFE4F000BE73D /* customCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCardView.swift; sourceTree = "<group>"; };
+		B1BDD4F623155A880038FE01 /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
 		C592B26122C50A9D0075FB2D /* animalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animalViewController.swift; sourceTree = "<group>"; };
 		C592B26322C50AE50075FB2D /* vehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vehiclesViewController.swift; sourceTree = "<group>"; };
 		C592B26522C75D910075FB2D /* questionCustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionCustomLabel.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				C5EB582422A81C0C00D6A6DA /* createWorldCustom.swift */,
 				C5EB57AE22A7B8A700D6A6DA /* Info.plist */,
 				6E21087022B70AE50016A60B /* GoogleService-Info.plist */,
+				B1BDD4F623155A880038FE01 /* EdgeInsetLabel.swift */,
 			);
 			path = BuildAR;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				B1631BC022EDF867000BE73D /* customLabel.swift in Sources */,
 				C592B26422C50AE50075FB2D /* vehiclesViewController.swift in Sources */,
 				6EB9C38322DE1B98006B83F3 /* SettingsViewController.swift in Sources */,
+				B1BDD4F723155A880038FE01 /* EdgeInsetLabel.swift in Sources */,
 				C5EB582522A81C0C00D6A6DA /* createWorldCustom.swift in Sources */,
 				C5EB57A522A7B8A600D6A6DA /* ViewController.swift in Sources */,
 				6EE7CCA122B91F4400E137E9 /* NavButtonCustom.swift in Sources */,

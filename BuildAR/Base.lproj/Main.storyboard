@@ -92,16 +92,16 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bI9-75-LNl">
-                                <rect key="frame" x="641" y="20" width="235" height="374"/>
+                                <rect key="frame" x="616" y="20" width="260" height="374"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsN-4a-poq">
-                                        <rect key="frame" x="95" y="8.5" width="45" height="20.5"/>
+                                        <rect key="frame" x="107.5" y="8.5" width="45" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wko-N6-iYn">
-                                        <rect key="frame" x="59" y="37" width="117" height="29"/>
+                                        <rect key="frame" x="71.5" y="37" width="117" height="29"/>
                                         <segments>
                                             <segment title="Animal"/>
                                             <segment title="Vehicle"/>
@@ -111,13 +111,13 @@
                                         </connections>
                                     </segmentedControl>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T43-he-rYi" userLabel="Animal View">
-                                        <rect key="frame" x="0.0" y="73" width="235" height="302"/>
+                                        <rect key="frame" x="0.0" y="73" width="260" height="302"/>
                                         <connections>
                                             <segue destination="HB1-HE-ycU" kind="embed" id="Fag-LU-xjL"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLV-JD-pg7" userLabel="Vehicle View">
-                                        <rect key="frame" x="0.0" y="73" width="235" height="302"/>
+                                        <rect key="frame" x="0.0" y="73" width="260" height="302"/>
                                         <connections>
                                             <segue destination="AFH-0J-EJz" kind="embed" id="N1m-mb-CaX"/>
                                         </connections>
@@ -153,9 +153,9 @@
                                 </connections>
                             </button>
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9q-mX-nJh">
-                                <rect key="frame" x="621" y="0.0" width="275" height="414"/>
+                                <rect key="frame" x="596" y="0.0" width="300" height="414"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="275" id="fct-Iz-uzV"/>
+                                    <constraint firstAttribute="width" constant="300" id="fct-Iz-uzV"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="VPU-ID-iiy" kind="embed" id="4Et-TW-qFy"/>
@@ -256,11 +256,11 @@
             <objects>
                 <viewController storyboardIdentifier="vehicleViewController" id="HB1-HE-ycU" customClass="vehiclesViewController" customModule="BuildAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MYi-21-I37">
-                        <rect key="frame" x="0.0" y="0.0" width="235" height="302"/>
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="302"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="6hx-HL-jos">
-                                <rect key="frame" x="13" y="45.5" width="209" height="211"/>
+                                <rect key="frame" x="25.5" y="45.5" width="209" height="211"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="kgZ-EU-MDk">
                                         <rect key="frame" x="0.0" y="0.0" width="209" height="90"/>
@@ -432,11 +432,11 @@
             <objects>
                 <viewController storyboardIdentifier="animalViewController" id="AFH-0J-EJz" customClass="animalViewController" customModule="BuildAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lmX-Xc-zgZ">
-                        <rect key="frame" x="0.0" y="0.0" width="235" height="302"/>
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="302"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="u1t-fF-ZSS">
-                                <rect key="frame" x="14.5" y="45" width="206" height="212"/>
+                                <rect key="frame" x="27" y="45" width="206" height="212"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="oRa-qn-i7S">
                                         <rect key="frame" x="0.0" y="0.0" width="206" height="90"/>
@@ -519,14 +519,14 @@
             <objects>
                 <viewController id="VPU-ID-iiy" customClass="questionViewController" customModule="BuildAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mZQ-aI-jfj">
-                        <rect key="frame" x="0.0" y="0.0" width="275" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qMZ-ZO-MZe">
-                                <rect key="frame" x="20" y="30" width="235" height="277"/>
+                                <rect key="frame" x="20" y="30" width="255" height="277"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXb-UG-l6w">
-                                        <rect key="frame" x="0.0" y="0.0" width="235" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="60"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s6R-bH-AsE">
                                                 <rect key="frame" x="0.0" y="0.0" width="72" height="60"/>
@@ -535,7 +535,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qz-ZS-fGn">
-                                                <rect key="frame" x="72" y="0.0" width="163" height="60"/>
+                                                <rect key="frame" x="72" y="0.0" width="183" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="Ihr-T7-TJc"/>
                                                 </constraints>
@@ -545,16 +545,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="vYV-Bt-QPC">
-                                        <rect key="frame" x="0.0" y="75" width="235" height="202"/>
+                                        <rect key="frame" x="0.0" y="75" width="255" height="202"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zdq-fp-6HC">
-                                                <rect key="frame" x="0.0" y="0.0" width="235" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ue-x3-NtL" userLabel="Answer Button" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="2Mi-Tr-Tdh"/>
-                                                            <constraint firstAttribute="width" constant="80" id="UsF-ht-Jga"/>
+                                                            <constraint firstAttribute="width" constant="60" id="UsF-ht-Jga"/>
                                                         </constraints>
                                                         <state key="normal" title="A" backgroundImage="A">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -564,25 +564,39 @@
                                                             <action selector="choice:" destination="VPU-ID-iiy" eventType="touchUpInside" id="QNL-g7-iX9"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3da-Ih-76l">
-                                                        <rect key="frame" x="90" y="0.0" width="145" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3da-Ih-76l" customClass="EdgeInsetLabel" customModule="BuildAR" customModuleProvider="target">
+                                                        <rect key="frame" x="70" y="0.0" width="185" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="9ll-RZ-07C"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bKU-2j-JCw">
-                                                <rect key="frame" x="0.0" y="54" width="235" height="40"/>
+                                                <rect key="frame" x="0.0" y="54" width="255" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wti-GW-uO3" userLabel="Answer Button" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="IAF-If-AlC"/>
-                                                            <constraint firstAttribute="width" constant="80" id="p30-N0-tGQ"/>
+                                                            <constraint firstAttribute="width" constant="60" id="p30-N0-tGQ"/>
                                                         </constraints>
                                                         <state key="normal" title="B" backgroundImage="B">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -592,25 +606,39 @@
                                                             <action selector="choice:" destination="VPU-ID-iiy" eventType="touchUpInside" id="yo0-zA-q51"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bs0-vm-HlE">
-                                                        <rect key="frame" x="90" y="0.0" width="145" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bs0-vm-HlE" customClass="EdgeInsetLabel" customModule="BuildAR" customModuleProvider="target">
+                                                        <rect key="frame" x="70" y="0.0" width="185" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="7e2-zC-uWU"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VUV-iT-iof">
-                                                <rect key="frame" x="0.0" y="108" width="235" height="40"/>
+                                                <rect key="frame" x="0.0" y="108" width="255" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZe-e4-xgJ" userLabel="Answer Button" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="fyo-By-BRX"/>
-                                                            <constraint firstAttribute="width" constant="80" id="owi-Oj-hmb"/>
+                                                            <constraint firstAttribute="width" constant="60" id="owi-Oj-hmb"/>
                                                         </constraints>
                                                         <state key="normal" title="C" backgroundImage="C">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -620,24 +648,38 @@
                                                             <action selector="choice:" destination="VPU-ID-iiy" eventType="touchUpInside" id="N4z-Zj-6cs"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vY0-rg-g6c">
-                                                        <rect key="frame" x="90" y="0.0" width="145" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vY0-rg-g6c" customClass="EdgeInsetLabel" customModule="BuildAR" customModuleProvider="target">
+                                                        <rect key="frame" x="70" y="0.0" width="185" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="svQ-ly-IJc"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tpa-JK-8Vc">
-                                                <rect key="frame" x="0.0" y="162" width="235" height="40"/>
+                                                <rect key="frame" x="0.0" y="162" width="255" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlK-rt-GgG" userLabel="Answer Button" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="80" id="G5S-IV-brO"/>
+                                                            <constraint firstAttribute="width" constant="60" id="G5S-IV-brO"/>
                                                             <constraint firstAttribute="height" constant="40" id="zZO-WS-V5O"/>
                                                         </constraints>
                                                         <state key="normal" title="D" backgroundImage="D">
@@ -648,14 +690,28 @@
                                                             <action selector="choice:" destination="VPU-ID-iiy" eventType="touchUpInside" id="wBT-m6-OSv"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0a-jj-X7U">
-                                                        <rect key="frame" x="90" y="0.0" width="145" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0a-jj-X7U" customClass="EdgeInsetLabel" customModule="BuildAR" customModuleProvider="target">
+                                                        <rect key="frame" x="70" y="0.0" width="185" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Wol-aD-R8w"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -674,7 +730,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="v2B-cJ-uCW">
-                                <rect key="frame" x="20" y="364" width="235" height="30"/>
+                                <rect key="frame" x="20" y="364" width="260" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8p4-Po-L2L" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
@@ -687,10 +743,10 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lbQ-gB-Uk4">
-                                        <rect key="frame" x="70" y="0.0" width="165" height="30"/>
+                                        <rect key="frame" x="70" y="0.0" width="190" height="30"/>
                                     </imageView>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvO-5g-U6p" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
-                                        <rect key="frame" x="235" y="0.0" width="60" height="30"/>
+                                        <rect key="frame" x="260" y="0.0" width="60" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="Mcw-L7-C8K"/>
                                         </constraints>
@@ -710,7 +766,7 @@
                             <constraint firstAttribute="bottom" secondItem="v2B-cJ-uCW" secondAttribute="bottom" constant="20" id="I08-QB-vd5"/>
                             <constraint firstItem="qMZ-ZO-MZe" firstAttribute="top" secondItem="mZQ-aI-jfj" secondAttribute="top" constant="30" id="Lfv-BH-EpQ"/>
                             <constraint firstItem="v2B-cJ-uCW" firstAttribute="leading" secondItem="mZQ-aI-jfj" secondAttribute="leading" constant="20" id="Pct-fz-iYS"/>
-                            <constraint firstAttribute="trailing" secondItem="qMZ-ZO-MZe" secondAttribute="trailing" constant="20" id="mSf-9o-zrC"/>
+                            <constraint firstAttribute="trailing" secondItem="qMZ-ZO-MZe" secondAttribute="trailing" constant="25" id="mSf-9o-zrC"/>
                             <constraint firstAttribute="trailing" secondItem="v2B-cJ-uCW" secondAttribute="trailing" constant="20" id="ted-iZ-BV2"/>
                             <constraint firstItem="qMZ-ZO-MZe" firstAttribute="leading" secondItem="mZQ-aI-jfj" secondAttribute="leading" constant="20" id="xux-KZ-YCQ"/>
                         </constraints>
@@ -914,10 +970,10 @@
                                 </connections>
                             </button>
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNT-fW-yzB">
-                                <rect key="frame" x="621" y="0.0" width="275" height="414"/>
+                                <rect key="frame" x="596" y="0.0" width="300" height="414"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="IBe-Rt-9q2"/>
-                                    <constraint firstAttribute="width" constant="275" id="sJ7-WJ-Q2l"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="IBe-Rt-9q2"/>
+                                    <constraint firstAttribute="width" constant="300" id="sJ7-WJ-Q2l"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="EXh-tP-G3l" kind="embed" id="ac0-jb-3D4"/>
@@ -1004,13 +1060,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutorial" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afo-C6-iMb">
-                                <rect key="frame" x="64" y="260" width="57" height="20.5"/>
+                                <rect key="frame" x="419.5" y="264" width="57" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oNf-Ur-TtV">
-                                <rect key="frame" x="104" y="212" width="347" height="29"/>
+                                <rect key="frame" x="274.5" y="216" width="347" height="29"/>
                                 <segments>
                                     <segment title="Standard (lower primary)"/>
                                     <segment title="Advanced (upper primary)"/>
@@ -1019,8 +1075,8 @@
                                     <action selector="switchLevel:" destination="0oo-U1-Uit" eventType="valueChanged" id="34c-Q2-Z7M"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select quiz difficulty level:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05G-nu-2H3">
-                                <rect key="frame" x="64" y="170" width="210.5" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select quiz difficulty level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05G-nu-2H3">
+                                <rect key="frame" x="345" y="174" width="206" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1031,8 +1087,20 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6t-uM-ZDk">
+                                <rect key="frame" x="409" y="84" width="78" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzO-Xd-2F1">
+                                <rect key="frame" x="423.5" y="304.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchTutorial:" destination="0oo-U1-Uit" eventType="valueChanged" id="Ll4-95-lLL"/>
+                                </connections>
+                            </switch>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bBS-TD-m8n">
-                                <rect key="frame" x="104" y="122" width="347" height="29"/>
+                                <rect key="frame" x="355.5" y="126" width="185" height="29"/>
                                 <segments>
                                     <segment title="AR Mode"/>
                                     <segment title="Virtual Mode"/>
@@ -1041,43 +1109,26 @@
                                     <action selector="switchMode:" destination="0oo-U1-Uit" eventType="valueChanged" id="7HR-mR-1L0"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Mode:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6t-uM-ZDk">
-                                <rect key="frame" x="64" y="80" width="83" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzO-Xd-2F1">
-                                <rect key="frame" x="104" y="300.5" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchTutorial:" destination="0oo-U1-Uit" eventType="valueChanged" id="Ll4-95-lLL"/>
-                                </connections>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.18835544586181641" green="0.19191846251487732" blue="0.20392337441444397" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="qzO-Xd-2F1" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="60" id="1Rw-uv-rLu"/>
-                            <constraint firstItem="M6t-uM-ZDk" firstAttribute="top" secondItem="sWO-vm-TfF" secondAttribute="bottom" constant="30" id="1yX-k4-7KQ"/>
                             <constraint firstItem="sWO-vm-TfF" firstAttribute="top" secondItem="OOk-qT-ewH" secondAttribute="top" constant="20" id="25o-9D-ZGn"/>
-                            <constraint firstItem="Afo-C6-iMb" firstAttribute="top" secondItem="oNf-Ur-TtV" secondAttribute="bottom" constant="20" id="55b-wY-ePA"/>
-                            <constraint firstItem="OOk-qT-ewH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="M6t-uM-ZDk" secondAttribute="trailing" symbolic="YES" id="5bq-oW-veb"/>
-                            <constraint firstItem="bBS-TD-m8n" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="60" id="6hX-O1-XkH"/>
-                            <constraint firstItem="05G-nu-2H3" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="Jbl-1o-wBB"/>
-                            <constraint firstItem="OOk-qT-ewH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oNf-Ur-TtV" secondAttribute="trailing" symbolic="YES" id="R3q-QO-Vp0"/>
-                            <constraint firstItem="OOk-qT-ewH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="05G-nu-2H3" secondAttribute="trailing" symbolic="YES" id="TUo-gc-OEu"/>
-                            <constraint firstItem="oNf-Ur-TtV" firstAttribute="trailing" secondItem="bBS-TD-m8n" secondAttribute="trailing" id="YRH-bg-mu0"/>
-                            <constraint firstItem="05G-nu-2H3" firstAttribute="top" secondItem="bBS-TD-m8n" secondAttribute="bottom" constant="20" id="ZdY-zC-8SP"/>
+                            <constraint firstItem="05G-nu-2H3" firstAttribute="centerX" secondItem="rtV-xh-iHK" secondAttribute="centerX" id="9Bf-Dk-3Qc"/>
+                            <constraint firstItem="oNf-Ur-TtV" firstAttribute="top" secondItem="05G-nu-2H3" secondAttribute="bottom" constant="20" id="CoA-dO-8FA"/>
+                            <constraint firstItem="Afo-C6-iMb" firstAttribute="centerX" secondItem="rtV-xh-iHK" secondAttribute="centerX" id="QQJ-Wf-bzI"/>
+                            <constraint firstItem="bBS-TD-m8n" firstAttribute="top" secondItem="M6t-uM-ZDk" secondAttribute="bottom" constant="20" id="RjD-0F-Fe8"/>
+                            <constraint firstItem="Afo-C6-iMb" firstAttribute="top" secondItem="oNf-Ur-TtV" secondAttribute="bottom" constant="20" id="YbP-f5-uN9"/>
+                            <constraint firstItem="M6t-uM-ZDk" firstAttribute="top" secondItem="le2-ff-L9K" secondAttribute="bottom" constant="32" id="Z2P-Oz-su3"/>
+                            <constraint firstItem="qzO-Xd-2F1" firstAttribute="top" secondItem="Afo-C6-iMb" secondAttribute="bottom" constant="20" id="ZIC-Hd-obN"/>
                             <constraint firstItem="le2-ff-L9K" firstAttribute="centerX" secondItem="rtV-xh-iHK" secondAttribute="centerX" id="eRX-u2-s2f"/>
                             <constraint firstItem="sWO-vm-TfF" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="ezP-8j-L4y"/>
+                            <constraint firstItem="05G-nu-2H3" firstAttribute="top" secondItem="bBS-TD-m8n" secondAttribute="bottom" constant="20" id="fSg-9u-9oe"/>
                             <constraint firstItem="le2-ff-L9K" firstAttribute="top" secondItem="OOk-qT-ewH" secondAttribute="top" constant="20" id="fz6-Ml-ksm"/>
-                            <constraint firstItem="M6t-uM-ZDk" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="gUX-eV-w7o"/>
+                            <constraint firstItem="oNf-Ur-TtV" firstAttribute="centerX" secondItem="rtV-xh-iHK" secondAttribute="centerX" id="guj-Kr-d6g"/>
                             <constraint firstItem="OOk-qT-ewH" firstAttribute="leading" secondItem="sWO-vm-TfF" secondAttribute="trailing" constant="-60" id="ijt-am-KdY"/>
-                            <constraint firstItem="OOk-qT-ewH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Afo-C6-iMb" secondAttribute="trailing" symbolic="YES" id="nsZ-LR-uVL"/>
-                            <constraint firstItem="oNf-Ur-TtV" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="60" id="piU-3D-4eU"/>
-                            <constraint firstItem="qzO-Xd-2F1" firstAttribute="top" secondItem="Afo-C6-iMb" secondAttribute="bottom" constant="20" id="say-Az-U2X"/>
-                            <constraint firstItem="oNf-Ur-TtV" firstAttribute="top" secondItem="05G-nu-2H3" secondAttribute="bottom" constant="20" id="st4-Up-17g"/>
-                            <constraint firstItem="bBS-TD-m8n" firstAttribute="top" secondItem="M6t-uM-ZDk" secondAttribute="bottom" constant="20" id="vD9-Hy-54b"/>
-                            <constraint firstItem="Afo-C6-iMb" firstAttribute="leading" secondItem="OOk-qT-ewH" secondAttribute="leading" constant="20" id="vor-XS-eHU"/>
+                            <constraint firstItem="qzO-Xd-2F1" firstAttribute="centerX" secondItem="rtV-xh-iHK" secondAttribute="centerX" id="jA4-rv-taA"/>
+                            <constraint firstItem="bBS-TD-m8n" firstAttribute="centerX" secondItem="rtV-xh-iHK" secondAttribute="centerX" id="muE-Z7-mXq"/>
+                            <constraint firstItem="M6t-uM-ZDk" firstAttribute="centerX" secondItem="rtV-xh-iHK" secondAttribute="centerX" id="tAp-TL-0VX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OOk-qT-ewH"/>
                     </view>
@@ -1185,14 +1236,14 @@
             <objects>
                 <viewController id="EXh-tP-G3l" customClass="questionViewController" customModule="BuildAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mym-6h-Ihe">
-                        <rect key="frame" x="0.0" y="0.0" width="275" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2YI-5i-X1d">
-                                <rect key="frame" x="20" y="30" width="235" height="277"/>
+                                <rect key="frame" x="20" y="30" width="260" height="277"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sl7-TT-eUA">
-                                        <rect key="frame" x="0.0" y="0.0" width="235" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="60"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ycz-E8-NHo">
                                                 <rect key="frame" x="0.0" y="0.0" width="72" height="60"/>
@@ -1201,7 +1252,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHd-vZ-aPe">
-                                                <rect key="frame" x="72" y="0.0" width="163" height="60"/>
+                                                <rect key="frame" x="72" y="0.0" width="188" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="kG2-R6-pSA"/>
                                                 </constraints>
@@ -1211,15 +1262,15 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Tzq-JA-RzP">
-                                        <rect key="frame" x="0.0" y="75" width="235" height="202"/>
+                                        <rect key="frame" x="0.0" y="75" width="260" height="202"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hoH-yY-mTg">
-                                                <rect key="frame" x="0.0" y="0.0" width="235" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kt-1P-KZW" userLabel="Answer Button" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="80" id="Tiy-6G-NP2"/>
+                                                            <constraint firstAttribute="width" constant="60" id="Tiy-6G-NP2"/>
                                                             <constraint firstAttribute="height" constant="40" id="gtb-M5-pG0"/>
                                                         </constraints>
                                                         <state key="normal" title="A" backgroundImage="A">
@@ -1230,24 +1281,38 @@
                                                             <action selector="choice:" destination="EXh-tP-G3l" eventType="touchUpInside" id="0uk-84-Sm4"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JLY-cp-zv5">
-                                                        <rect key="frame" x="90" y="0.0" width="145" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JLY-cp-zv5" customClass="EdgeInsetLabel" customModule="BuildAR" customModuleProvider="target">
+                                                        <rect key="frame" x="70" y="0.0" width="190" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="919-Dc-PtE"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IVX-ae-bwP">
-                                                <rect key="frame" x="0.0" y="54" width="235" height="40"/>
+                                                <rect key="frame" x="0.0" y="54" width="260" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLO-C5-iWg" userLabel="Answer Button" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="80" id="kGU-CB-ch3"/>
+                                                            <constraint firstAttribute="width" constant="60" id="kGU-CB-ch3"/>
                                                             <constraint firstAttribute="height" constant="40" id="wuU-zo-EEw"/>
                                                         </constraints>
                                                         <state key="normal" title="B" backgroundImage="B">
@@ -1258,24 +1323,38 @@
                                                             <action selector="choice:" destination="EXh-tP-G3l" eventType="touchUpInside" id="xgf-su-0M4"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uat-aV-eRO">
-                                                        <rect key="frame" x="90" y="0.0" width="145" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uat-aV-eRO" customClass="EdgeInsetLabel" customModule="BuildAR" customModuleProvider="target">
+                                                        <rect key="frame" x="70" y="0.0" width="190" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="vOZ-jR-Hbu"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fUX-gz-x1A">
-                                                <rect key="frame" x="0.0" y="108" width="235" height="40"/>
+                                                <rect key="frame" x="0.0" y="108" width="260" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNg-62-xj4" userLabel="Answer Button" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="80" id="VUa-ee-PTb"/>
+                                                            <constraint firstAttribute="width" constant="60" id="VUa-ee-PTb"/>
                                                             <constraint firstAttribute="height" constant="40" id="lRQ-cW-IkE"/>
                                                         </constraints>
                                                         <state key="normal" title="C" backgroundImage="C">
@@ -1286,25 +1365,39 @@
                                                             <action selector="choice:" destination="EXh-tP-G3l" eventType="touchUpInside" id="Uco-9n-ILH"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y68-af-ccz">
-                                                        <rect key="frame" x="90" y="0.0" width="145" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y68-af-ccz" customClass="EdgeInsetLabel" customModule="BuildAR" customModuleProvider="target">
+                                                        <rect key="frame" x="70" y="0.0" width="190" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="OcW-YU-HYi"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dbc-1D-THL">
-                                                <rect key="frame" x="0.0" y="162" width="235" height="40"/>
+                                                <rect key="frame" x="0.0" y="162" width="260" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dB5-Zj-Xd8" userLabel="Answer Button" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="NIf-kT-btL"/>
-                                                            <constraint firstAttribute="width" constant="80" id="ptV-dg-ZsK"/>
+                                                            <constraint firstAttribute="width" constant="60" id="ptV-dg-ZsK"/>
                                                         </constraints>
                                                         <state key="normal" title="D" backgroundImage="D">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1314,14 +1407,28 @@
                                                             <action selector="choice:" destination="EXh-tP-G3l" eventType="touchUpInside" id="f0B-MB-ptc"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CCD-j3-LIA">
-                                                        <rect key="frame" x="90" y="0.0" width="145" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CCD-j3-LIA" customClass="EdgeInsetLabel" customModule="BuildAR" customModuleProvider="target">
+                                                        <rect key="frame" x="70" y="0.0" width="190" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="S1p-yz-Cir"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -1340,7 +1447,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dnc-uL-aAy">
-                                <rect key="frame" x="20" y="364" width="235" height="30"/>
+                                <rect key="frame" x="20" y="364" width="260" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJI-ru-dwn" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
@@ -1353,10 +1460,10 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I8M-es-5Rp">
-                                        <rect key="frame" x="70" y="0.0" width="165" height="30"/>
+                                        <rect key="frame" x="70" y="0.0" width="190" height="30"/>
                                     </imageView>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgZ-Sk-B4Q" customClass="NavButtonCustom" customModule="BuildAR" customModuleProvider="target">
-                                        <rect key="frame" x="235" y="0.0" width="60" height="30"/>
+                                        <rect key="frame" x="260" y="0.0" width="60" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="u0N-Xl-iuJ"/>
                                         </constraints>
@@ -1473,7 +1580,7 @@
         <image name="zebra" width="288" height="216"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ghR-hu-MKK"/>
+        <segue reference="2Lo-uc-I32"/>
         <segue reference="QrQ-Mi-Tyc"/>
         <segue reference="2QE-LB-aXt"/>
     </inferredMetricsTieBreakers>

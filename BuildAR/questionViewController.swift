@@ -129,6 +129,19 @@ class questionViewController: UIViewController {
                 questionID = Int.random(in: 1...numberOfQuestions)
             }
             
+            // Reset selected button
+            self.currentButton?.alpha = 1
+            // Enable choice selection
+            self.choiceView.isUserInteractionEnabled = true
+            // Unhide next button
+            self.nextButton.isHidden = true
+            // Hide the tick or cross
+            self.resultImage.image = nil
+            self.resetLabelColor(label: self.labelA)
+            self.resetLabelColor(label: self.labelB)
+            self.resetLabelColor(label: self.labelC)
+            self.resetLabelColor(label: self.labelD)
+            
             // Set text for question label and for each choice label
             self.labelTextFromFirebase(key: "question", label: self.questionLabel)
             self.labelTextFromFirebase(key: "choiceA", label: self.labelA)
@@ -183,7 +196,7 @@ class questionViewController: UIViewController {
     func showAnswer(label: UILabel, ans: String)
     {
         if (label.text == ans) {
-            label.backgroundColor = UIColor.green
+            label.backgroundColor = UIColor(red: 0.71, green: 0.97, blue: 0.45, alpha: 0.5)
         }
     }
     
