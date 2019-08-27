@@ -41,12 +41,20 @@ class questionViewController: UIViewController {
         super.viewDidLoad()
         
         quizViewController = self
+        
+//        if questionLevel == "standard" {
+//            //set branch to standard questions
+//
+//        } else if questionLevel == "advanced" {
+//            //set branch to advance questions
+//        }
 
-        let dataRef = roofRef.child("\(questionBranch)/question")
+        let dataRef = roofRef.child("\(questionBranch)/\(questionLevel)")
         dataRef.observe(.value) { (snap: DataSnapshot) in
             self.generateQuestion()
         }
         self.generateImage(objectID: questionBranch)
+        print(questionBranch)
     }
     
     
@@ -70,7 +78,7 @@ class questionViewController: UIViewController {
         // Retrieve choice text
         guard let choiceButtonPressed = sender.currentTitle else {return}
         let choiceButton = "choice" + choiceButtonPressed
-        let choiceRef = roofRef.child("\(questionBranch)/question/qn\(questionID)/\(String(describing: choiceButton))")
+        let choiceRef = roofRef.child("\(questionBranch)/\(questionLevel)/qn\(questionID)/\(String(describing: choiceButton))")
         choiceRef.observe(.value) { (snap: DataSnapshot) in
             let choice = snap.value as? String
             
@@ -120,7 +128,7 @@ class questionViewController: UIViewController {
         self.generateImage(objectID: questionBranch)
         
         // Get new question number
-        let dataRef = roofRef.child("\(questionBranch)/question")
+        let dataRef = roofRef.child("\(questionBranch)/\(questionLevel)")
         dataRef.observe(.value) { (snap: DataSnapshot) in
             
             // Get the number of questions in the category
@@ -161,7 +169,7 @@ class questionViewController: UIViewController {
     private func labelTextFromFirebase(key: String, label: UILabel) {
         
         // Retrieve text from Firebase
-        let referance = roofRef.child("\(questionBranch)/question/qn\(questionID)/\(key)")
+        let referance = roofRef.child("\(questionBranch)/\(questionLevel)/qn\(questionID)/\(key)")
         referance.observe(.value) { (snap: DataSnapshot) in
             label.text = snap.value as? String
         }
@@ -170,7 +178,7 @@ class questionViewController: UIViewController {
     private func checkAnswer(choice: String) {
         
         // Retrieve answer
-        let answerRef = roofRef.child("\(questionBranch)/question/qn\(questionID)/answer")
+        let answerRef = roofRef.child("\(questionBranch)/\(questionLevel)/qn\(questionID)/answer")
         answerRef.observe(.value) { (snap: DataSnapshot) in
             let answer = snap.value as? String
             
