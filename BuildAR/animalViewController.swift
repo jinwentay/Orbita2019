@@ -59,6 +59,25 @@ class animalViewController: UIViewController {
         highlightButton(sender: sender)
     }
     
+    @IBAction func poisonfrog(_ sender: UIButton) {
+        objectScene = "art.scnassets/poisonfrog/PoisonDartFrog.scn"
+        objectNode = "poisonfrog"
+        
+        highlightButton(sender: sender)
+    }
+    
+    @IBAction func grasshopper(_ sender: UIButton) {
+        objectScene = "art.scnassets/grasshopper/mantis.scn"
+        objectNode = "mantis"
+        
+        highlightButton(sender: sender)
+    }
+    @IBAction func rooster(_ sender: UIButton) {
+        objectScene = "art.scnassets/rooster/Rooster(1).scn"
+        objectNode = "rooster"
+        
+        highlightButton(sender: sender)
+    }
     func highlightButton(sender: UIButton) {
         selectedButton?.layer.borderColor = UIColor.white.cgColor
         sender.layer.borderColor = UIColor.darkGray.cgColor

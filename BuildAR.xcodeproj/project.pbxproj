@@ -21,6 +21,8 @@
 		6EED37F822E1A84D0075F406 /* alien.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EED37F122E1A84D0075F406 /* alien.mp3 */; };
 		6EED37F922E1A84D0075F406 /* catmeow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EED37F222E1A84D0075F406 /* catmeow.mp3 */; };
 		6EED37FA22E1A84D0075F406 /* dogbark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EED37F322E1A84D0075F406 /* dogbark.mp3 */; };
+		B106A6922316818F005B679E /* rooster.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B106A6912316818F005B679E /* rooster.mp3 */; };
+		B106A694231684B7005B679E /* poisonfrog.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B106A693231684B7005B679E /* poisonfrog.mp3 */; };
 		B1631BBC22EDAA47000BE73D /* DYKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631BBB22EDAA47000BE73D /* DYKViewController.swift */; };
 		B1631BBE22EDF47C000BE73D /* settingButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631BBD22EDF47C000BE73D /* settingButtons.swift */; };
 		B1631BC022EDF867000BE73D /* customLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1631BBF22EDF867000BE73D /* customLabel.swift */; };
@@ -67,6 +69,8 @@
 		6EED37F122E1A84D0075F406 /* alien.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alien.mp3; sourceTree = "<group>"; };
 		6EED37F222E1A84D0075F406 /* catmeow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = catmeow.mp3; sourceTree = "<group>"; };
 		6EED37F322E1A84D0075F406 /* dogbark.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dogbark.mp3; sourceTree = "<group>"; };
+		B106A6912316818F005B679E /* rooster.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = rooster.mp3; path = ../../../Downloads/rooster.mp3; sourceTree = "<group>"; };
+		B106A693231684B7005B679E /* poisonfrog.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = poisonfrog.mp3; path = ../../../Downloads/poisonfrog.mp3; sourceTree = "<group>"; };
 		B1631BBB22EDAA47000BE73D /* DYKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYKViewController.swift; sourceTree = "<group>"; };
 		B1631BBD22EDF47C000BE73D /* settingButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingButtons.swift; sourceTree = "<group>"; };
 		B1631BBF22EDF867000BE73D /* customLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customLabel.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 			children = (
 				6EED37ED22E1A84D0075F406 /* airplaine.mp3 */,
 				6EED37EE22E1A84D0075F406 /* liongrowl.mp3 */,
+				B106A693231684B7005B679E /* poisonfrog.mp3 */,
+				B106A6912316818F005B679E /* rooster.mp3 */,
 				6EED37EF22E1A84D0075F406 /* zebracall.mp3 */,
 				6EED37F022E1A84D0075F406 /* motocycle.mp3 */,
 				6EED37F122E1A84D0075F406 /* alien.mp3 */,
@@ -295,11 +301,13 @@
 			files = (
 				6EED37F522E1A84D0075F406 /* liongrowl.mp3 in Resources */,
 				6EED37F722E1A84D0075F406 /* motocycle.mp3 in Resources */,
+				B106A694231684B7005B679E /* poisonfrog.mp3 in Resources */,
 				6EED37F822E1A84D0075F406 /* alien.mp3 in Resources */,
 				C5EB57A322A7B8A600D6A6DA /* art.scnassets in Resources */,
 				C5EB57AD22A7B8A700D6A6DA /* LaunchScreen.storyboard in Resources */,
 				6EED37F622E1A84D0075F406 /* zebracall.mp3 in Resources */,
 				6E21087122B70AE50016A60B /* GoogleService-Info.plist in Resources */,
+				B106A6922316818F005B679E /* rooster.mp3 in Resources */,
 				6EED37FA22E1A84D0075F406 /* dogbark.mp3 in Resources */,
 				C5EB57AA22A7B8A700D6A6DA /* Assets.xcassets in Resources */,
 				6EED37F422E1A84D0075F406 /* airplaine.mp3 in Resources */,

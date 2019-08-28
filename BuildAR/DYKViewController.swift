@@ -23,7 +23,10 @@ class DYKViewController: UIViewController {
                   "zebra":"zebrabanner",
                   "lion": "lionbanner",
                   "cat": "catbanner",
-                  "train": "trainbanner"]
+                  "train": "trainbanner",
+                  "rooster": "roosterbanner",
+                  "poisonfrog": "poisonfrogbanner",
+                  "mantis":"mantisbanner"]
     override func viewDidLoad() {
         super.viewDidLoad()
         infoViewController = self

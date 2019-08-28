@@ -35,7 +35,10 @@ class questionViewController: UIViewController {
                   "zebra":"zebra",
                   "lion": "lion",
                   "cat": "cat",
-                  "train": "train"]
+                  "train": "train",
+                  "poisonfrog": "poisonfrog",
+                  "rooster": "rooster",
+                  "mantis":"mantis"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

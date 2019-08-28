@@ -29,7 +29,9 @@ var sounds = ["dog":"dogbark",
               "lion":"liongrowl",
               "spaceship":"alien",
               "plane":"airplane",
-              "motorcycle":"motorcycle"]
+              "motorcycle":"motorcycle",
+              "rooster":"rooster",
+              "poisonfrog":"poisonfrog"]
 
 class ARViewController: UIViewController, ARSCNViewDelegate {
     
